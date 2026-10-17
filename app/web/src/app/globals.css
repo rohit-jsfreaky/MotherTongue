@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+/* MotherTongue design system v2 — studiomode.ai look (Rohit, 17 Oct). Values in docs/DESIGN-SYSTEM.md. */
+@theme inline {
+  --font-sans: var(--font-general), var(--font-noto-bn), var(--font-noto-dv), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space), var(--font-general), ui-sans-serif, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+
+  --color-page: #f9fafb;
+  --color-card: #ffffff;
+  --color-ink: #05050a;
+  --color-ink-2: #14151a;
+  --color-ink-3: #131517;
+  --color-fg: #05050a;
+  --color-fg-2: #4b5060;
+  --color-fg-3: #8a8f9c;
+  --color-line: #e7e8ec;
+  --color-line-2: #d9dbe1;
+  --color-soft: #f2f3f5;
+  --color-lime: #d1fe17;
+  --color-lime-600: #b6e000;
+  --color-violet: #5b41f8;
+  --color-violet-700: #4a32e0;
+  --color-violet-100: #ece9ff;
+  --color-violet-50: #f5f3ff;
+  --color-peach: #fbd9a8;
+  --color-pink: #f9c4dc;
+  --color-mint: #b9f5a3;
+  --color-tag-red: #ff4d2e;
+  --color-ok: #16a34a;
+  --color-ok-100: #dcfce7;
+  --color-warn: #b45309;
+  --color-warn-100: #fef3c7;
+  --color-bad: #dc2626;
+  --color-bad-100: #fee2e2;
+
+  --radius-btn: 12px;
+  --radius-card: 24px;
+
+  --shadow-soft: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 1px 2px rgba(16, 17, 26, 0.04), 0 8px 24px -8px rgba(16, 17, 26, 0.12);
+  --shadow-float: 0 18px 50px -12px rgba(30, 20, 90, 0.35);
+  --shadow-cta: 0 8px 32px 0 rgba(91, 65, 248, 0.35);
+  --shadow-lime: inset 0 2px 0 0 rgba(255, 255, 255, 0.72);
+
+  --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-marquee: sm-marquee 30s linear infinite;
+  --animate-scroll-x: sm-marquee 40s linear infinite;
+  --animate-masonry-up: masonry-up 35s linear infinite;
+  --animate-masonry-down: masonry-down 35s linear infinite;
+  --animate-drift-a: drift-a 9s ease-in-out infinite;
+  --animate-drift-b: drift-b 11s ease-in-out infinite;
+  --animate-drift-c: drift-c 13s ease-in-out infinite;
+  --animate-cta-in: cta-slide-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-cta-shimmer: cta-shimmer 3s ease-in-out infinite;
+  --animate-hero-up: hero-fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-glow: glow-pulse 4s ease-in-out infinite;
+  --animate-caret: caret-blink 0.9s steps(1) infinite;
+}
+
+/* Keyframes as captured from the reference (values identical). */
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes sm-marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@keyframes masonry-up { 0% { transform: translateY(0); } 100% { transform: translateY(-50%); } }
+@keyframes masonry-down { 0% { transform: translateY(-50%); } 100% { transform: translateY(0); } }
+@keyframes drift-a {
+  0% { transform: translate(0, 0) scale(1); } 25% { transform: translate(10px, -14px) scale(1.02); }
+  50% { transform: translate(16px, 6px) scale(1.04); } 75% { transform: translate(-6px, 10px) scale(1.01); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes drift-b {
+  0% { transform: translate(0, 0) scale(1); } 25% { transform: translate(-14px, 10px) scale(0.98); }
+  50% { transform: translate(-4px, -16px) scale(1.04); } 75% { transform: translate(12px, -4px) scale(1.01); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes drift-c {
+  0% { transform: translate(0, 0) scale(1); } 33% { transform: translate(10px, 14px) scale(1.05); }
+  66% { transform: translate(-12px, -10px) scale(0.98); } 100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes mesh-drift-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); } 33% { transform: translate(80px, -60px) scale(1.1); }
+  66% { transform: translate(-40px, 40px) scale(0.95); }
+}
+@keyframes mesh-drift-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); } 33% { transform: translate(-60px, 50px) scale(1.05); }
+  66% { transform: translate(50px, -30px) scale(1.1); }
+}
+@keyframes mesh-drift-3 { 0%, 100% { transform: translate(0, 0) scale(1.05); } 50% { transform: translate(40px, 60px) scale(0.95); } }
+@keyframes cta-slide-in {
+  0% { opacity: 0; transform: translateY(24px) scale(0.97); } 60% { opacity: 1; transform: translateY(-4px) scale(1.01); }
+  80% { transform: translateY(2px) scale(1); } 100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes cta-shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(200%); } }
+@keyframes hero-fade-up { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes glow-pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.7; } }
+@keyframes caret-blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+@keyframes shimmer-text { from { background-position: 150% 0; } to { background-position: -50% 0; } }
+@keyframes ad-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+:root {
+  --header-h: 64px;
+}
+
+html,
+body {
+  overflow-x: clip;
+}
+
+html {
+  background: var(--color-page);
+  color: var(--color-fg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--color-page);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+::selection {
+  background: var(--color-lime);
+  color: var(--color-ink);
+}
+
+/* Film grain over the hero gradient, like the reference. */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.9'/></svg>");
+}
+
+.text-shimmer {
+  background-image: linear-gradient(90deg, #8a8f9c 0%, #8a8f9c 40%, #05050a 50%, #8a8f9c 60%, #8a8f9c 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer-text 1.6s linear infinite;
+}
+
+/* Pause marquees while hovered, as the reference does. */
+.marquee-pause:hover > * {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

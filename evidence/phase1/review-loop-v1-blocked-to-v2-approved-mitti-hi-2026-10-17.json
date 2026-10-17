@@ -1,0 +1,199 @@
+{
+ "note": "Real run 17 Oct 2026 on the local dev worker: AMD Token Factory (Gemma-4-31B-IT + OmniVoice). v1 was blocked by the Gemma fact check; the marketer asked for a change in plain words; v2 removed the claim, passed every check, and a brand-memory rule was learned.",
+ "v1": {
+  "status": "needs_look",
+  "issues": [
+   {
+    "by": "gemma",
+    "code": "fact_mismatch",
+    "field": "voice",
+    "scene": "s2",
+    "message": "\"बिल्कुल प्राकृतिक\": The claim 'completely natural' (बिल्कुल प्राकृतिक) is not present in the locked facts or the master ad, which only states the product is 'made with things you can pronounce'.",
+    "blocking": true
+   }
+  ],
+  "scene2": "मिट्टी ग्लो सीरम. सरल, सौम्य और बिल्कुल प्राकृतिक।"
+ },
+ "request": {
+  "text": "Don't say 'completely natural' — we never claim that. Keep it honest and gentle.",
+  "chips": [
+   "Calmer"
+  ]
+ },
+ "v2": {
+  "status": "ready",
+  "understood": "You want to remove the claim 'completely natural' as it's not approved. I will replace it with a phrase that emphasizes simplicity and honesty, keeping the polite Lucknowi tone.",
+  "changes": [
+   {
+    "what": "Replaced 'बिल्कुल प्राकृतिक' (completely natural) with 'साफ़ सामग्री' (clean ingredients) to remove the unapproved claim.",
+    "scene": "s2",
+    "fields": [
+     "voice"
+    ]
+   }
+  ],
+  "issues": [],
+  "scene2": "मिट्टी ग्लो सीरम. सरल, सौम्य और साफ़ सामग्री।",
+  "cost": {
+   "calls": [
+    {
+     "job": "051b225b-7450-4fce-804d-9fe53f2647b0:7204feb3-7fff-4384-a8a4-f51f22af4fee:1792229737783980200",
+     "model": "OmniVoice",
+     "stage": "voice-ref",
+     "status": 200,
+     "attempt": 1,
+     "seconds": 3.5,
+     "endpoint": "/audio/speech",
+     "ratelimit": {
+      "x-ratelimit-limit-user-rpm": "20",
+      "x-ratelimit-remaining-user-rpm": "18",
+      "x-ratelimit-used-user-daily-usd": "0.00713931",
+      "x-ratelimit-limit-user-daily-usd": "1",
+      "x-ratelimit-reset-user-daily-usd": "1792252800",
+      "x-ratelimit-remaining-user-daily-usd": "0.99286069"
+     },
+     "started_at": 1792229737.9969602,
+     "output_bytes": 242924
+    },
+    {
+     "job": "051b225b-7450-4fce-804d-9fe53f2647b0:7204feb3-7fff-4384-a8a4-f51f22af4fee:1792229737783980200",
+     "model": "OmniVoice",
+     "stage": "voice",
+     "status": 200,
+     "attempt": 1,
+     "seconds": 4.344000000000051,
+     "endpoint": "/audio/speech",
+     "ratelimit": {
+      "x-ratelimit-limit-user-rpm": "20",
+      "x-ratelimit-remaining-user-rpm": "17",
+      "x-ratelimit-used-user-daily-usd": "0.00714197",
+      "x-ratelimit-limit-user-daily-usd": "1",
+      "x-ratelimit-reset-user-daily-usd": "1792252800",
+      "x-ratelimit-remaining-user-daily-usd": "0.99285803"
+     },
+     "started_at": 1792229741.5125327,
+     "output_bytes": 99884
+    },
+    {
+     "job": "051b225b-7450-4fce-804d-9fe53f2647b0:7204feb3-7fff-4384-a8a4-f51f22af4fee:1792229737783980200",
+     "model": "OmniVoice",
+     "stage": "voice",
+     "status": 200,
+     "attempt": 1,
+     "seconds": 5.938000000000102,
+     "endpoint": "/audio/speech",
+     "ratelimit": {
+      "x-ratelimit-limit-user-rpm": "20",
+      "x-ratelimit-remaining-user-rpm": "16",
+      "x-ratelimit-used-user-daily-usd": "0.00714197",
+      "x-ratelimit-limit-user-daily-usd": "1",
+      "x-ratelimit-reset-user-daily-usd": "1792252800",
+      "x-ratelimit-remaining-user-daily-usd": "0.99285803"
+     },
+     "started_at": 1792229741.5243351,
+     "output_bytes": 158924
+    },
+    {
+     "job": "051b225b-7450-4fce-804d-9fe53f2647b0:7204feb3-7fff-4384-a8a4-f51f22af4fee:1792229737783980200",
+     "model": "OmniVoice",
+     "stage": "voice",
+     "status": 200,
+     "attempt": 1,
+     "seconds": 7.265999999999622,
+     "endpoint": "/audio/speech",
+     "ratelimit": {
+      "x-ratelimit-limit-user-rpm": "20",
+      "x-ratelimit-remaining-user-rpm": "15",
+      "x-ratelimit-used-user-daily-usd": "0.00714197",
+      "x-ratelimit-limit-user-daily-usd": "1",
+      "x-ratelimit-reset-user-daily-usd": "1792252800",
+      "x-ratelimit-remaining-user-daily-usd": "0.99285803"
+     },
+     "started_at": 1792229741.5183098,
+     "output_bytes": 150284
+    },
+    {
+     "job": "051b225b-7450-4fce-804d-9fe53f2647b0:7204feb3-7fff-4384-a8a4-f51f22af4fee:1792229737783980200",
+     "model": "OmniVoice",
+     "stage": "voice",
+     "status": 200,
+     "attempt": 1,
+     "seconds": 27.85900000000038,
+     "endpoint": "/audio/speech",
+     "ratelimit": {
+      "x-ratelimit-limit-user-rpm": "20",
+      "x-ratelimit-remaining-user-rpm": "14",
+      "x-ratelimit-used-user-daily-usd": "0.00714621",
+      "x-ratelimit-limit-user-daily-usd": "1",
+      "x-ratelimit-reset-user-daily-usd": "1792252800",
+      "x-ratelimit-remaining-user-daily-usd": "0.99285379"
+     },
+     "started_at": 1792229741.530926,
+     "output_bytes": 92204
+    },
+    {
+     "job": "051b225b-7450-4fce-804d-9fe53f2647b0:7204feb3-7fff-4384-a8a4-f51f22af4fee:1792229737783980200",
+     "model": "Gemma-4-31B-IT",
+     "stage": "factcheck",
+     "status": 200,
+     "attempt": 1,
+     "seconds": 1.4530000000004293,
+     "endpoint": "/chat/completions",
+     "ratelimit": {
+      "x-ratelimit-limit-user-rpm": "20",
+      "x-ratelimit-remaining-user-rpm": "13",
+      "x-ratelimit-used-user-daily-usd": "0.00714719",
+      "x-ratelimit-limit-user-daily-usd": "1",
+      "x-ratelimit-reset-user-daily-usd": "1792252800",
+      "x-ratelimit-remaining-user-daily-usd": "0.99285281"
+     },
+     "started_at": 1792229769.5015726,
+     "response_id": "daeff4a0b40d42579918453455e338da",
+     "prompt_tokens": 732,
+     "completion_tokens": 6
+    },
+    {
+     "job": "051b225b-7450-4fce-804d-9fe53f2647b0:7204feb3-7fff-4384-a8a4-f51f22af4fee:1792229737783980200",
+     "model": "Gemma-4-31B-IT",
+     "stage": "check-picture",
+     "status": 200,
+     "attempt": 1,
+     "seconds": 24.48399999999947,
+     "endpoint": "/chat/completions",
+     "ratelimit": {
+      "x-ratelimit-limit-user-rpm": "20",
+      "x-ratelimit-remaining-user-rpm": "12",
+      "x-ratelimit-used-user-daily-usd": "0.00723221",
+      "x-ratelimit-limit-user-daily-usd": "1",
+      "x-ratelimit-reset-user-daily-usd": "1792252800",
+      "x-ratelimit-remaining-user-daily-usd": "0.99276779"
+     },
+     "started_at": 1792229774.0495574,
+     "response_id": "18d48d3d8da34da3a0a314e5c6ddd619",
+     "prompt_tokens": 1642,
+     "completion_tokens": 257
+    }
+   ],
+   "gemma_calls": 2,
+   "model_calls": 7,
+   "prompt_tokens": 2374,
+   "omnivoice_calls": 5,
+   "seconds_by_stage": {
+    "voice": 31.5,
+    "write": 0.1,
+    "render": 2.5,
+    "picture": 25.0,
+    "factcheck": 1.6
+   },
+   "completion_tokens": 263,
+   "retried_or_failed_calls": 0
+  }
+ },
+ "learned_rule": [
+  {
+   "text": "Avoid claiming products are 'completely natural'; maintain an honest and gentle tone.",
+   "scope_label": "All versions",
+   "why": "The brand has a strict policy against absolute claims regarding natural ingredients."
+  }
+ ]
+}

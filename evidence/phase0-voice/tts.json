@@ -1,0 +1,33 @@
+{
+ "tts": {
+  "en": {
+   "status": 200,
+   "ct": "audio/wav",
+   "secs": 3.76,
+   "bytes": 149804,
+   "err": null
+  },
+  "hi": {
+   "status": 200,
+   "ct": "audio/wav",
+   "secs": 3.91,
+   "bytes": 192044,
+   "err": null
+  },
+  "it": {
+   "status": 200,
+   "ct": "audio/wav",
+   "secs": 3.39,
+   "bytes": 178604,
+   "err": null
+  },
+  "bn": {
+   "status": 200,
+   "ct": "audio/wav",
+   "secs": 3.59,
+   "bytes": 197804,
+   "err": null
+  }
+ },
+ "date": "2026-10-17"
+}

@@ -1,0 +1,214 @@
+{
+ "stride": {
+  "milan-it": {
+   "issues": [],
+   "summary": "The version adopts a fast, direct, and urban tone suited for a stylish Milanese audience, stripping away unnecessary words for maximum impact.",
+   "lines": [
+    {
+     "scene": "s1",
+     "voice": "Non serve correre forte. Basta partire.",
+     "screen": "Inizia a correre."
+    },
+    {
+     "scene": "s2",
+     "voice": "Stride Air due. Leggere, morbide, nate per la città.",
+     "screen": "Stride Air 2"
+    },
+    {
+     "scene": "s3",
+     "voice": "Solo cinquantanove euro, e c'è reso gratuito per trenta giorni.",
+     "screen": "€59 · Reso gratuito per 30 giorni"
+    },
+    {
+     "scene": "s4",
+     "voice": "Allacciati e vai.",
+     "screen": "Scoprile su stride-run.in"
+    }
+   ]
+  },
+  "kolkata-bn": {
+   "issues": [],
+   "summary": "Adapted the tone to be warm and encouraging using the informal 'tumi' style common among friends in Kolkata.",
+   "lines": [
+    {
+     "scene": "s1",
+     "voice": "গতি নয়, শুধু শুরু করো।",
+     "screen": "দৌড়ানো শুরু করো"
+    },
+    {
+     "scene": "s2",
+     "voice": "স্ট্রাইড এয়ার টু। হালকা, আরামদায়ক আর শহরের জন্য।",
+     "screen": "Stride Air 2"
+    },
+    {
+     "scene": "s3",
+     "voice": "দাম দু হাজার নশো নিরানব্বই টাকা, সাথে তিরিশ দিনে ফ্রি রিটার্ন।",
+     "screen": "₹2,999 · ৩০ দিনে ফ্রি রিটার্ন"
+    },
+    {
+     "scene": "s4",
+     "voice": "আজই জুতো পরে নাও।",
+     "screen": "কিনুন stride-run.in-এ"
+    }
+   ]
+  },
+  "lucknow-hi": {
+   "issues": [],
+   "summary": "The tone was shifted from a direct, energetic push to a more polite, graceful, and encouraging invitation typical of Lucknow's cultural charm.",
+   "lines": [
+    {
+     "scene": "s1",
+     "voice": "रफ़्तार नहीं, बस शुरुआत ज़रूरी है।",
+     "screen": "बस दौड़ना शुरू करें"
+    },
+    {
+     "scene": "s2",
+     "voice": "स्ट्राइड एयर टू. हल्का, नरम और शहर के लिए।",
+     "screen": "Stride Air 2"
+    },
+    {
+     "scene": "s3",
+     "voice": "सिर्फ दो हज़ार नौ सौ निन्यानवे रुपये, साथ में तीस दिन में मुफ़्त वापसी।",
+     "screen": "₹2,999 · 30 दिन में मुफ़्त वापसी"
+    },
+    {
+     "scene": "s4",
+     "voice": "आज ही कदम बढ़ाएं।",
+     "screen": "Shop at stride-run.in"
+    }
+   ]
+  },
+  "global-en": {
+   "issues": [],
+   "summary": "The tone was shifted from a purely motivational style to a warmer, more welcoming approach using friendlier adjectives and engaging phrasing.",
+   "lines": [
+    {
+     "scene": "s1",
+     "voice": "Don't worry about speed. Just get moving.",
+     "screen": "Just start running."
+    },
+    {
+     "scene": "s2",
+     "voice": "Stride Air two. Light, comfy, and perfect for the city.",
+     "screen": "Stride Air 2"
+    },
+    {
+     "scene": "s3",
+     "voice": "Get yours for two thousand nine hundred and ninety-nine rupees, plus free returns for thirty days.",
+     "screen": "₹2,999 · Free returns for 30 days"
+    },
+    {
+     "scene": "s4",
+     "voice": "Ready to start? Lace up.",
+     "screen": "Shop at stride-run.in"
+    }
+   ]
+  }
+ },
+ "mitti": {
+  "kolkata-bn": {
+   "issues": [],
+   "summary": "The copy uses warm, informal Bengali ('tumi') and focuses on 'purity' and 'care' to resonate with the local Kolkata sensibility.",
+   "lines": [
+    {
+     "scene": "s1",
+     "voice": "তোমার ত্বকেরও তো বিশ্রাম চাই।",
+     "screen": "ত্বককেও দাও একটু ছুটি"
+    },
+    {
+     "scene": "s2",
+     "voice": "মিট্টি গ্লো সিরাম। একদম সহজ আর খাঁটি।",
+     "screen": "Mitti Glow Serum"
+    },
+    {
+     "scene": "s3",
+     "voice": "দাম ছশো নিরানব্বই টাকা, সাথে ফ্রি ডেলিভারি।",
+     "screen": "₹699 · ফ্রি ডেলিভারি"
+    },
+    {
+     "scene": "s4",
+     "voice": "আজ রাতে ত্বকের যত্ন নাও।",
+     "screen": "অর্ডার করো mitti-skin.in-এ"
+    }
+   ]
+  },
+  "lucknow-hi": {
+   "issues": [],
+   "summary": "The version uses polite, empathetic Hindi (using 'aap' and 'rakhein') to reflect the refined and caring charm of Lucknow.",
+   "lines": [
+    {
+     "scene": "s1",
+     "voice": "आपकी त्वचा भी थक गई होगी।",
+     "screen": "त्वचा को मिले आराम"
+    },
+    {
+     "scene": "s2",
+     "voice": "मिट्टी ग्लो सीरम. सरल, सौम्य और कुदरती।",
+     "screen": "Mitti Glow Serum"
+    },
+    {
+     "scene": "s3",
+     "voice": "कीमत छह सौ निन्यानवे रुपये, साथ में मुफ़्त डिलीवरी।",
+     "screen": "₹699 · मुफ़्त डिलीवरी"
+    },
+    {
+     "scene": "s4",
+     "voice": "आज अपनी त्वचा का ख्याल रखें।",
+     "screen": "Order at mitti-skin.in"
+    }
+   ]
+  },
+  "global-en": {
+   "issues": [],
+   "summary": "The version shifts from a slightly weary tone to a more positive, refreshing, and warm approach suitable for a global English audience.",
+   "lines": [
+    {
+     "scene": "s1",
+     "voice": "Your skin needs a little reset.",
+     "screen": "Time for a reset."
+    },
+    {
+     "scene": "s2",
+     "voice": "Mitti Glow Serum. Simple, gentle, and honest ingredients.",
+     "screen": "Mitti Glow Serum"
+    },
+    {
+     "scene": "s3",
+     "voice": "Just six hundred and ninety-nine rupees, plus free shipping.",
+     "screen": "₹699 | Free shipping"
+    },
+    {
+     "scene": "s4",
+     "voice": "Give your skin some love tonight.",
+     "screen": "Shop at mitti-skin.in"
+    }
+   ]
+  },
+  "milan-it": {
+   "issues": [],
+   "summary": "The tone was shifted from a slow, empathetic narrative to a quick, chic, and direct style suited for a Milanese audience.",
+   "lines": [
+    {
+     "scene": "s1",
+     "voice": "Anche la tua pelle è stanca.",
+     "screen": "Pelle, pausa relax."
+    },
+    {
+     "scene": "s2",
+     "voice": "Mitti Glow Serum. Semplice, delicato, ingredienti chiari.",
+     "screen": "Mitti Glow Serum"
+    },
+    {
+     "scene": "s3",
+     "voice": "Costa quattordici euro, con spedizione gratuita.",
+     "screen": "€14 · Spedizione gratuita"
+    },
+    {
+     "scene": "s4",
+     "voice": "Stasera, coccola la tua pelle.",
+     "screen": "Ordina su mitti-skin.in"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,1474 @@
+{
+ "template": "mitti",
+ "audiences": [
+  "kolkata-bn",
+  "lucknow-hi",
+  "milan-it",
+  "global-en"
+ ],
+ "finished_at": "2026-10-17T09:28:39.392749+00:00",
+ "wall_seconds": 142.9,
+ "see": {
+  "scenes": {
+   "s1": {
+    "text_on_screen": [],
+    "text_band": "none",
+    "subject": "white skincare bottle",
+    "subject_band": "middle",
+    "free_band": "top",
+    "description": "A white bottle sits on a wooden slice with a pine branch arching over it against a blue background."
+   },
+   "s2": {
+    "text_on_screen": [],
+    "text_band": "none",
+    "subject": "dropper and hand",
+    "subject_band": "middle",
+    "free_band": "top",
+    "description": "A hand holds a glass dropper over an open palm against a light pink background."
+   },
+   "s3": {
+    "text_on_screen": [],
+    "text_band": "none",
+    "subject": "liquid drop",
+    "subject_band": "middle",
+    "free_band": "top",
+    "description": "Extreme close-up of a clear liquid drop falling from a dropper toward a palm."
+   },
+   "s4": {
+    "text_on_screen": [],
+    "text_band": "none",
+    "subject": "skincare product in hand",
+    "subject_band": "bottom",
+    "free_band": "top",
+    "description": "A person pours a white cream from a green bottle into their open palm."
+   }
+  },
+  "placement": {
+   "s1": "top",
+   "s2": "top",
+   "s3": "bottom",
+   "s4": "top"
+  }
+ },
+ "versions": [
+  {
+   "language": "bn",
+   "summary": "The version uses a warm, neighborhood-friend tone with 'tumi' (informal) and local phrasing like 'chhuti' and 'jotno' to feel more personal and less like a corporate ad.",
+   "status": "ready",
+   "issues": [],
+   "lines": [
+    {
+     "voice": "তোর ত্বকেরও তো ছুটি চাই।",
+     "screen": "ত্বককে দাও একটু জিরিয়ে নেওয়ার সুযোগ",
+     "meaning": "Your skin also wants a holiday.",
+     "why": "Used the concept of 'chhuti' (holiday/break) which resonates with the exhausted urban vibe of Kolkata.",
+     "scene": "s1",
+     "voice_filled": "তোর ত্বকেরও তো ছুটি চাই।",
+     "screen_filled": "ত্বককে দাও একটু জিরিয়ে নেওয়ার সুযোগ",
+     "meaning_filled": "Your skin also wants a holiday.",
+     "voice_seconds": 2.04,
+     "fit": "natural"
+    },
+    {
+     "voice": "{PRODUCT}। সহজ, কোমল আর একদম প্রাকৃতিক।",
+     "screen": "{PRODUCT}",
+     "meaning": "{PRODUCT}. Simple, gentle and completely natural.",
+     "why": "Replaced 'things you can pronounce' with 'natural' to maintain the calm, honest tone in Bengali while staying concise.",
+     "scene": "s2",
+     "voice_filled": "মিট্টি গ্লো সিরাম। সহজ, কোমল আর একদম প্রাকৃতিক।",
+     "screen_filled": "Mitti Glow Serum",
+     "meaning_filled": "Mitti Glow Serum. Simple, gentle and completely natural.",
+     "voice_seconds": 3.64,
+     "fit": "natural"
+    },
+    {
+     "voice": "দাম {PRICE}, আর সাথে {OFFER}।",
+     "screen": "{PRICE} · {OFFER}",
+     "meaning": "Price is {PRICE}, and with it {OFFER}.",
+     "why": "Used a friendly, conversational structure common in local shopping talk.",
+     "scene": "s3",
+     "voice_filled": "দাম ছশো নিরানব্বই টাকা, আর সাথে ফ্রি ডেলিভারি।",
+     "screen_filled": "₹699 · ফ্রি ডেলিভারি",
+     "meaning_filled": "Price is ₹699, and with it Free shipping.",
+     "voice_seconds": 3.2,
+     "fit": "natural"
+    },
+    {
+     "voice": "আজ রাতে একটু যত্ন নে।",
+     "screen": "অর্ডার করো {URL}-এ",
+     "meaning": "Take a little care tonight.",
+     "why": "Used 'jotno' (care) which is a warm, emotive word used between friends in Kolkata.",
+     "scene": "s4",
+     "voice_filled": "আজ রাতে একটু যত্ন নে।",
+     "screen_filled": "অর্ডার করো mitti-skin.in-এ",
+     "meaning_filled": "Take a little care tonight.",
+     "voice_seconds": 2.0,
+     "fit": "natural"
+    }
+   ],
+   "picture": [
+    {
+     "scene": "s1",
+     "facts": [],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s2",
+     "facts": [
+      {
+       "fact": "Product",
+       "expected": "Mitti Glow Serum",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s3",
+     "facts": [
+      {
+       "fact": "Price",
+       "expected": "₹699",
+       "on_screen": true
+      },
+      {
+       "fact": "Offer",
+       "expected": "ফ্রি ডেলিভারি",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s4",
+     "facts": [
+      {
+       "fact": "Website",
+       "expected": "mitti-skin.in",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    }
+   ],
+   "audience": "kolkata-bn",
+   "cost": {
+    "model_calls": 8,
+    "retried_or_failed_calls": 0,
+    "gemma_calls": 3,
+    "omnivoice_calls": 5,
+    "prompt_tokens": 3709,
+    "completion_tokens": 664,
+    "seconds_by_stage": {
+     "write": 14.8,
+     "voice": 53.6,
+     "factcheck": 11.6,
+     "render": 2.0,
+     "picture": 19.4
+    }
+   }
+  },
+  {
+   "language": "hi",
+   "summary": "The version adopts a polite, graceful Lucknowi tone using soft phrasing and respectful address.",
+   "status": "needs_look",
+   "issues": [
+    {
+     "scene": "s2",
+     "field": "voice",
+     "code": "fact_mismatch",
+     "message": "\"बिल्कुल प्राकृतिक\": The claim 'completely natural' (बिल्कुल प्राकृतिक) is not present in the locked facts or the master ad, which only states the product is 'made with things you can pronounce'.",
+     "by": "gemma",
+     "blocking": true
+    }
+   ],
+   "lines": [
+    {
+     "voice": "आपकी त्वचा भी काफी थक गई है।",
+     "screen": "त्वचा को दें थोड़ा आराम",
+     "meaning": "Your skin has also become quite tired.",
+     "why": "Used 'thak gayi' and a polite tone to reflect the gentle, caring nature of Lucknowi speech.",
+     "scene": "s1",
+     "voice_filled": "आपकी त्वचा भी काफी थक गई है।",
+     "screen_filled": "त्वचा को दें थोड़ा आराम",
+     "meaning_filled": "Your skin has also become quite tired.",
+     "voice_seconds": 1.99,
+     "fit": "natural"
+    },
+    {
+     "voice": "{PRODUCT}. सरल, सौम्य और बिल्कुल प्राकृतिक।",
+     "screen": "{PRODUCT}",
+     "meaning": "{PRODUCT}. Simple, gentle, and completely natural.",
+     "why": "Replaced 'things you can pronounce' with 'natural' for a more graceful, local flow while keeping the 'simple' and 'gentle' attributes.",
+     "scene": "s2",
+     "voice_filled": "मिट्टी ग्लो सीरम. सरल, सौम्य और बिल्कुल प्राकृतिक।",
+     "screen_filled": "Mitti Glow Serum",
+     "meaning_filled": "Mitti Glow Serum. Simple, gentle, and completely natural.",
+     "voice_seconds": 3.48,
+     "fit": "natural"
+    },
+    {
+     "voice": "कीमत {PRICE}, और {OFFER} भी।",
+     "screen": "{PRICE} · {OFFER}",
+     "meaning": "Price {PRICE}, and {OFFER} too.",
+     "why": "Added 'भी' (too) to make the offer sound like a polite addition, typical of Lucknowi charm.",
+     "scene": "s3",
+     "voice_filled": "कीमत छह सौ निन्यानवे रुपये, और मुफ़्त डिलीवरी भी।",
+     "screen_filled": "₹699 · मुफ़्त डिलीवरी",
+     "meaning_filled": "Price ₹699, and Free shipping too.",
+     "voice_seconds": 3.05,
+     "fit": "natural"
+    },
+    {
+     "voice": "आज अपनी त्वचा का ख्याल रखें।",
+     "screen": "ऑर्डर करें {URL} पर",
+     "meaning": "Take care of your skin today.",
+     "why": "Changed 'be kind' to 'khayal rakhein' (take care), which is the natural way to express caring in polite Hindi.",
+     "scene": "s4",
+     "voice_filled": "आज अपनी त्वचा का ख्याल रखें।",
+     "screen_filled": "ऑर्डर करें mitti-skin.in पर",
+     "meaning_filled": "Take care of your skin today.",
+     "voice_seconds": 1.9,
+     "fit": "natural"
+    }
+   ],
+   "picture": [
+    {
+     "scene": "s1",
+     "facts": [],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s2",
+     "facts": [
+      {
+       "fact": "Product",
+       "expected": "Mitti Glow Serum",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s3",
+     "facts": [
+      {
+       "fact": "Price",
+       "expected": "₹699",
+       "on_screen": true
+      },
+      {
+       "fact": "Offer",
+       "expected": "मुफ़्त डिलीवरी",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s4",
+     "facts": [
+      {
+       "fact": "Website",
+       "expected": "mitti-skin.in",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    }
+   ],
+   "audience": "lucknow-hi",
+   "cost": {
+    "model_calls": 8,
+    "retried_or_failed_calls": 0,
+    "gemma_calls": 3,
+    "omnivoice_calls": 5,
+    "prompt_tokens": 3695,
+    "completion_tokens": 721,
+    "seconds_by_stage": {
+     "write": 16.7,
+     "voice": 60.9,
+     "factcheck": 5.9,
+     "render": 2.8,
+     "picture": 17.1
+    }
+   }
+  },
+  {
+   "language": "it",
+   "summary": "The tone is shifted from a soft, slow pace to a more direct, stylish, and sophisticated Milanese approach while maintaining the brand's honesty.",
+   "status": "ready",
+   "issues": [],
+   "lines": [
+    {
+     "voice": "Anche la tua pelle è stanca.",
+     "screen": "Pelle, pausa relax.",
+     "meaning": "Your skin is tired too.",
+     "why": "Milanese style is direct and punchy; 'stanca' captures the 'long week' feeling concisely.",
+     "scene": "s1",
+     "voice_filled": "Anche la tua pelle è stanca.",
+     "screen_filled": "Pelle, pausa relax.",
+     "meaning_filled": "Your skin is tired too.",
+     "voice_seconds": 2.07,
+     "fit": "natural"
+    },
+    {
+     "voice": "{PRODUCT}. Semplice, delicato, ingredienti chiari.",
+     "screen": "{PRODUCT}",
+     "meaning": "{PRODUCT}. Simple, gentle, clear ingredients.",
+     "why": "Replaced 'things you can pronounce' with 'clear ingredients' to sound more sophisticated and stylish in Italian.",
+     "scene": "s2",
+     "voice_filled": "Mitti Glow Serum. Semplice, delicato, ingredienti chiari.",
+     "screen_filled": "Mitti Glow Serum",
+     "meaning_filled": "Mitti Glow Serum. Simple, gentle, clear ingredients.",
+     "voice_seconds": 3.88,
+     "fit": "squeezed"
+    },
+    {
+     "voice": "Costa {PRICE}, con {OFFER}.",
+     "screen": "{PRICE} · {OFFER}",
+     "meaning": "It costs {PRICE}, with {OFFER}.",
+     "why": "Clean, minimal structure to keep the focus on the price and offer.",
+     "scene": "s3",
+     "voice_filled": "Costa quattordici euro, con spedizione gratuita.",
+     "screen_filled": "€14 · Spedizione gratuita",
+     "meaning_filled": "It costs ₹699, with Free shipping.",
+     "voice_seconds": 3.24,
+     "fit": "natural"
+    },
+    {
+     "voice": "Stasera, coccola la tua pelle.",
+     "screen": "Ordina su {URL}",
+     "meaning": "Tonight, pamper your skin.",
+     "why": "Used 'coccola' (pamper) which resonates better with Italian beauty standards than 'be kind'.",
+     "scene": "s4",
+     "voice_filled": "Stasera, coccola la tua pelle.",
+     "screen_filled": "Ordina su mitti-skin.in",
+     "meaning_filled": "Tonight, pamper your skin.",
+     "voice_seconds": 2.12,
+     "fit": "natural"
+    }
+   ],
+   "picture": [
+    {
+     "scene": "s1",
+     "facts": [],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s2",
+     "facts": [
+      {
+       "fact": "Product",
+       "expected": "Mitti Glow Serum",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s3",
+     "facts": [
+      {
+       "fact": "Price",
+       "expected": "€14",
+       "on_screen": true
+      },
+      {
+       "fact": "Offer",
+       "expected": "Spedizione gratuita",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s4",
+     "facts": [
+      {
+       "fact": "Website",
+       "expected": "mitti-skin.in",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    }
+   ],
+   "audience": "milan-it",
+   "cost": {
+    "model_calls": 9,
+    "retried_or_failed_calls": 0,
+    "gemma_calls": 3,
+    "omnivoice_calls": 6,
+    "prompt_tokens": 3653,
+    "completion_tokens": 642,
+    "seconds_by_stage": {
+     "write": 14.2,
+     "voice": 80.3,
+     "factcheck": 1.7,
+     "render": 2.0,
+     "picture": 11.8
+    }
+   }
+  },
+  {
+   "language": "en",
+   "summary": "The tone was shifted from a slightly conversational style to a warmer, more polished, and universally clear friendly approach.",
+   "status": "ready",
+   "issues": [],
+   "lines": [
+    {
+     "voice": "Your skin needs a little break.",
+     "screen": "Give your skin a break.",
+     "meaning": "Your skin needs some rest.",
+     "why": "Softened the phrasing to sound warmer and more inviting for a global audience.",
+     "scene": "s1",
+     "voice_filled": "Your skin needs a little break.",
+     "screen_filled": "Give your skin a break.",
+     "meaning_filled": "Your skin needs some rest.",
+     "voice_seconds": 2.13,
+     "fit": "natural"
+    },
+    {
+     "voice": "{PRODUCT}. Simple, gentle, and naturally sourced.",
+     "screen": "{PRODUCT}",
+     "meaning": "Mitti Glow Serum is simple, gentle, and made from natural ingredients.",
+     "why": "Replaced the colloquial 'things you can pronounce' with 'naturally sourced' for a clearer, more professional global tone.",
+     "scene": "s2",
+     "voice_filled": "Mitti Glow Serum. Simple, gentle, and naturally sourced.",
+     "screen_filled": "Mitti Glow Serum",
+     "meaning_filled": "Mitti Glow Serum is simple, gentle, and made from natural ingredients.",
+     "voice_seconds": 3.88,
+     "fit": "squeezed"
+    },
+    {
+     "voice": "Just {PRICE}, plus {OFFER}.",
+     "screen": "{PRICE} · {OFFER}",
+     "meaning": "The cost is the price and it includes the offer.",
+     "why": "Added 'Just' and 'plus' to make the pricing sound more friendly and like a benefit.",
+     "scene": "s3",
+     "voice_filled": "Just six hundred and ninety-nine rupees, plus free shipping.",
+     "screen_filled": "₹699 · Free shipping",
+     "meaning_filled": "The cost is the price and it includes the offer.",
+     "voice_seconds": 3.88,
+     "fit": "squeezed"
+    },
+    {
+     "voice": "Treat your skin with kindness tonight.",
+     "screen": "Order at {URL}",
+     "meaning": "Be gentle and caring toward your skin tonight.",
+     "why": "Changed 'Be kind' to 'Treat your skin with kindness' for a more nurturing, skincare-focused rhythm.",
+     "scene": "s4",
+     "voice_filled": "Treat your skin with kindness tonight.",
+     "screen_filled": "Order at mitti-skin.in",
+     "meaning_filled": "Be gentle and caring toward your skin tonight.",
+     "voice_seconds": 2.59,
+     "fit": "natural"
+    }
+   ],
+   "picture": [
+    {
+     "scene": "s1",
+     "facts": [],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s2",
+     "facts": [
+      {
+       "fact": "Product",
+       "expected": "Mitti Glow Serum",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s3",
+     "facts": [
+      {
+       "fact": "Price",
+       "expected": "₹699",
+       "on_screen": true
+      },
+      {
+       "fact": "Offer",
+       "expected": "Free shipping",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s4",
+     "facts": [
+      {
+       "fact": "Website",
+       "expected": "mitti-skin.in",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    }
+   ],
+   "audience": "global-en",
+   "cost": {
+    "model_calls": 10,
+    "retried_or_failed_calls": 0,
+    "gemma_calls": 3,
+    "omnivoice_calls": 7,
+    "prompt_tokens": 3629,
+    "completion_tokens": 570,
+    "seconds_by_stage": {
+     "write": 11.8,
+     "voice": 69.1,
+     "factcheck": 1.5,
+     "render": 2.0,
+     "picture": 17.5
+    }
+   }
+  }
+ ],
+ "failed": {},
+ "all_calls": [
+  {
+   "stage": "see",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229176.8002584,
+   "seconds": 32.10899999999947,
+   "attempt": 1,
+   "response_id": "00936c487f3948b5aa7e744fd01f13e0",
+   "prompt_tokens": 1355,
+   "completion_tokens": 364,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99429911",
+    "x-ratelimit-remaining-user-rpm": "16",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00570089"
+   }
+  },
+  {
+   "stage": "adapt",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229208.9106605,
+   "seconds": 11.780999999999949,
+   "attempt": 1,
+   "response_id": "902274872d24409b833d28bcc5a9f805",
+   "prompt_tokens": 1298,
+   "completion_tokens": 307,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99423550",
+    "x-ratelimit-remaining-user-rpm": "17",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00576450"
+   },
+   "job": "global-en:global-en:1792229208910660600"
+  },
+  {
+   "stage": "adapt",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229208.9106605,
+   "seconds": 14.234000000000378,
+   "attempt": 1,
+   "response_id": "083d58b10a9e474cb3269992059ede5d",
+   "prompt_tokens": 1307,
+   "completion_tokens": 379,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99423550",
+    "x-ratelimit-remaining-user-rpm": "17",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00576450"
+   },
+   "job": "milan-it:milan-it:1792229208910660600"
+  },
+  {
+   "stage": "adapt",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229208.906638,
+   "seconds": 14.75,
+   "attempt": 1,
+   "response_id": "a2d3fa20691e4d44989dcc6dcd644702",
+   "prompt_tokens": 1330,
+   "completion_tokens": 401,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99429911",
+    "x-ratelimit-remaining-user-rpm": "18",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00570089"
+   },
+   "job": "kolkata-bn:kolkata-bn:1792229208906637700"
+  },
+  {
+   "stage": "voice-ref",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229220.6821506,
+   "seconds": 3.0,
+   "attempt": 1,
+   "output_bytes": 218924,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99418034",
+    "x-ratelimit-remaining-user-rpm": "14",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00581966"
+   },
+   "job": "global-en:global-en:1792229208910660600"
+  },
+  {
+   "stage": "adapt",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229208.9086483,
+   "seconds": 16.688000000000102,
+   "attempt": 1,
+   "response_id": "45282e9cf94f47e6951d0aec0b7bab7d",
+   "prompt_tokens": 1323,
+   "completion_tokens": 401,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99423550",
+    "x-ratelimit-remaining-user-rpm": "15",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00576450"
+   },
+   "job": "lucknow-hi:lucknow-hi:1792229208908648300"
+  },
+  {
+   "stage": "voice-ref",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229223.1418762,
+   "seconds": 2.844000000000051,
+   "attempt": 1,
+   "output_bytes": 228044,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99411724",
+    "x-ratelimit-remaining-user-rpm": "13",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00588276"
+   },
+   "job": "milan-it:milan-it:1792229208910660600"
+  },
+  {
+   "stage": "voice-ref",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229223.6521397,
+   "seconds": 3.125,
+   "attempt": 1,
+   "output_bytes": 268844,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99411724",
+    "x-ratelimit-remaining-user-rpm": "12",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00588276"
+   },
+   "job": "kolkata-bn:kolkata-bn:1792229208906637700"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229223.703539,
+   "seconds": 4.515999999999622,
+   "attempt": 1,
+   "output_bytes": 102284,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99398615",
+    "x-ratelimit-remaining-user-rpm": "11",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00601385"
+   },
+   "job": "global-en:global-en:1792229208910660600"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229226.7781713,
+   "seconds": 2.905999999999949,
+   "attempt": 1,
+   "output_bytes": 124364,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99398507",
+    "x-ratelimit-remaining-user-rpm": "10",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00601493"
+   },
+   "job": "global-en:global-en:1792229208910660600"
+  },
+  {
+   "stage": "voice-ref",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229228.2182982,
+   "seconds": 2.75,
+   "attempt": 1,
+   "output_bytes": 239564,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99398507",
+    "x-ratelimit-remaining-user-rpm": "9",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00601493"
+   },
+   "job": "lucknow-hi:lucknow-hi:1792229208908648300"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229229.6932044,
+   "seconds": 2.907000000000153,
+   "attempt": 1,
+   "output_bytes": 99404,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99398241",
+    "x-ratelimit-remaining-user-rpm": "8",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00601759"
+   },
+   "job": "milan-it:milan-it:1792229208910660600"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229230.9690049,
+   "seconds": 2.9530000000004293,
+   "attempt": 1,
+   "output_bytes": 180044,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99398108",
+    "x-ratelimit-remaining-user-rpm": "7",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00601892"
+   },
+   "job": "milan-it:milan-it:1792229208910660600"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229232.5903156,
+   "seconds": 2.75,
+   "attempt": 1,
+   "output_bytes": 155564,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99398010",
+    "x-ratelimit-remaining-user-rpm": "6",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00601990"
+   },
+   "job": "milan-it:milan-it:1792229208910660600"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229233.9276476,
+   "seconds": 2.0,
+   "attempt": 1,
+   "output_bytes": 101804,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99397810",
+    "x-ratelimit-remaining-user-rpm": "5",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00602190"
+   },
+   "job": "milan-it:milan-it:1792229208910660600"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229235.3449478,
+   "seconds": 2.9210000000002765,
+   "attempt": 1,
+   "output_bytes": 97964,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99397537",
+    "x-ratelimit-remaining-user-rpm": "4",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00602463"
+   },
+   "job": "kolkata-bn:kolkata-bn:1792229208906637700"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229225.5965593,
+   "seconds": 14.125,
+   "attempt": 1,
+   "output_bytes": 178604,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99397537",
+    "x-ratelimit-remaining-user-rpm": "3",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00602463"
+   },
+   "job": "global-en:global-en:1792229208910660600"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229236.8522456,
+   "seconds": 5.063000000000102,
+   "attempt": 1,
+   "output_bytes": 174764,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99397537",
+    "x-ratelimit-remaining-user-rpm": "1",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00602463"
+   },
+   "job": "kolkata-bn:kolkata-bn:1792229208906637700"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229225.9795148,
+   "seconds": 18.859999999999673,
+   "attempt": 1,
+   "output_bytes": 192044,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99397537",
+    "x-ratelimit-remaining-user-rpm": "2",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00602463"
+   },
+   "job": "global-en:global-en:1792229208910660600"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229268.9763975,
+   "seconds": 5.82799999999952,
+   "attempt": 1,
+   "output_bytes": 95564,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99396882",
+    "x-ratelimit-remaining-user-rpm": "5",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00603118"
+   },
+   "job": "lucknow-hi:lucknow-hi:1792229208908648300"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229268.9605167,
+   "seconds": 7.186999999999898,
+   "attempt": 1,
+   "output_bytes": 153644,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99396882",
+    "x-ratelimit-remaining-user-rpm": "4",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00603118"
+   },
+   "job": "kolkata-bn:kolkata-bn:1792229208906637700"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229268.971487,
+   "seconds": 8.25,
+   "attempt": 1,
+   "output_bytes": 96044,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99396882",
+    "x-ratelimit-remaining-user-rpm": "3",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00603118"
+   },
+   "job": "kolkata-bn:kolkata-bn:1792229208906637700"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229268.9649718,
+   "seconds": 9.484000000000378,
+   "attempt": 1,
+   "output_bytes": 167084,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99396882",
+    "x-ratelimit-remaining-user-rpm": "2",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00603118"
+   },
+   "job": "lucknow-hi:lucknow-hi:1792229208908648300"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229280.7540073,
+   "seconds": 3.2650000000003274,
+   "attempt": 1,
+   "output_bytes": 146444,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99396375",
+    "x-ratelimit-remaining-user-rpm": "2",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00603625"
+   },
+   "job": "lucknow-hi:lucknow-hi:1792229208908648300"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229283.2014585,
+   "seconds": 3.2659999999996217,
+   "attempt": 1,
+   "output_bytes": 91244,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99396204",
+    "x-ratelimit-remaining-user-rpm": "3",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00603796"
+   },
+   "job": "lucknow-hi:lucknow-hi:1792229208908648300"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229285.6418295,
+   "seconds": 2.782000000000153,
+   "attempt": 1,
+   "output_bytes": 186284,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99396105",
+    "x-ratelimit-remaining-user-rpm": "3",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00603895"
+   },
+   "job": "global-en:global-en:1792229208910660600"
+  },
+  {
+   "stage": "factcheck",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229286.4649422,
+   "seconds": 2.3590000000003783,
+   "attempt": 1,
+   "response_id": "2f993a2cce5d455fba186f3627f24908",
+   "prompt_tokens": 737,
+   "completion_tokens": 6,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99396105",
+    "x-ratelimit-remaining-user-rpm": "1",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00603895"
+   },
+   "job": "kolkata-bn:kolkata-bn:1792229208906637700"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229283.7230413,
+   "seconds": 6.061999999999898,
+   "attempt": 1,
+   "output_bytes": 186284,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99396105",
+    "x-ratelimit-remaining-user-rpm": "2",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00603895"
+   },
+   "job": "global-en:global-en:1792229208910660600"
+  },
+  {
+   "stage": "factcheck",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229289.7850432,
+   "seconds": 1.4530000000004293,
+   "attempt": 1,
+   "response_id": "2881d483e6ed49149320d3555b88ccf5",
+   "prompt_tokens": 708,
+   "completion_tokens": 6,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99393798",
+    "x-ratelimit-remaining-user-rpm": "1",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00606202"
+   },
+   "job": "global-en:global-en:1792229208910660600"
+  },
+  {
+   "stage": "factcheck",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229288.421951,
+   "seconds": 3.9219999999995707,
+   "attempt": 1,
+   "response_id": "fab1534caf444e368223797861724ba3",
+   "prompt_tokens": 731,
+   "completion_tokens": 63,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99395895",
+    "x-ratelimit-remaining-user-rpm": "2",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00604105"
+   },
+   "job": "lucknow-hi:lucknow-hi:1792229208908648300"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229283.7270749,
+   "seconds": 19.688000000000102,
+   "attempt": 1,
+   "output_bytes": 186284,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99389713",
+    "x-ratelimit-remaining-user-rpm": "5",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00610287"
+   },
+   "job": "milan-it:milan-it:1792229208910660600"
+  },
+  {
+   "stage": "factcheck",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229303.4264915,
+   "seconds": 1.7029999999995198,
+   "attempt": 1,
+   "response_id": "7902134581ac4fc791014cc09becc03c",
+   "prompt_tokens": 715,
+   "completion_tokens": 6,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99389513",
+    "x-ratelimit-remaining-user-rpm": "4",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00610487"
+   },
+   "job": "milan-it:milan-it:1792229208910660600"
+  },
+  {
+   "stage": "check-picture",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229291.229797,
+   "seconds": 18.984999999999673,
+   "attempt": 1,
+   "response_id": "4743784723a14cb398b298abbae83eea",
+   "prompt_tokens": 1642,
+   "completion_tokens": 257,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99391995",
+    "x-ratelimit-remaining-user-rpm": "1",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00608005"
+   },
+   "job": "kolkata-bn:kolkata-bn:1792229208906637700"
+  },
+  {
+   "stage": "check-picture",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229293.6058943,
+   "seconds": 17.125,
+   "attempt": 1,
+   "response_id": "4b9a31d15d2a436c957df28b63e92d1a",
+   "prompt_tokens": 1623,
+   "completion_tokens": 257,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99389713",
+    "x-ratelimit-remaining-user-rpm": "2",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00610287"
+   },
+   "job": "global-en:global-en:1792229208910660600"
+  },
+  {
+   "stage": "check-picture",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229295.5246277,
+   "seconds": 16.70300000000043,
+   "attempt": 1,
+   "response_id": "4b6eb044c956406685a2e0784c348666",
+   "prompt_tokens": 1641,
+   "completion_tokens": 257,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99389713",
+    "x-ratelimit-remaining-user-rpm": "3",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00610287"
+   },
+   "job": "lucknow-hi:lucknow-hi:1792229208908648300"
+  },
+  {
+   "stage": "check-picture",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229307.5129046,
+   "seconds": 11.438000000000102,
+   "attempt": 1,
+   "response_id": "9f0ffb9e61de46a9a6ac651d3151566c",
+   "prompt_tokens": 1631,
+   "completion_tokens": 257,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99375064",
+    "x-ratelimit-remaining-user-rpm": "3",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00624936"
+   },
+   "job": "milan-it:milan-it:1792229208910660600"
+  }
+ ],
+ "usage_after": {
+  "organization_id": "oneclick-org-82211",
+  "project_id": "oneclick-project-82211",
+  "rpm_limit": 20,
+  "daily_cost_limit_usd": 1,
+  "daily_cost_used_usd": 0.006375744007527828,
+  "daily_cost_remaining_usd": 0.9936242559924722,
+  "daily_reset_timezone": "Asia/Shanghai",
+  "daily_reset_at": "2026-10-17T16:00:00.000Z",
+  "daily_reset_epoch": 1792252800,
+  "period_started_at": "2026-10-16T16:00:00.000Z",
+  "period_duration_value": 1,
+  "period_duration_unit": "day",
+  "window_hours": 24,
+  "recent_limit": 200,
+  "all_time": {
+   "requests": 289,
+   "errors": 18,
+   "total_tokens": 157296,
+   "prompt_tokens": 125502,
+   "prefill_tokens": 125502,
+   "completion_tokens": 31794,
+   "decoding_tokens": 31794,
+   "reasoning_tokens": 300,
+   "cached_tokens": 23358,
+   "kv_cache_hit_tokens": 23358,
+   "cache_write_tokens": 0,
+   "kv_cache_hit_rate": 0.1861165559114596,
+   "input_cost": 0.003986814524978399,
+   "output_cost": 0.002372580114752054,
+   "cached_input_cost": 1.6350602891179733e-05,
+   "cache_write_input_cost": 0,
+   "request_cost": 0,
+   "cost": 0.006375744007527828,
+   "last_request_at": "2026-10-17 09:28:41.377289"
+  },
+  "today": {
+   "requests": 289,
+   "errors": 18,
+   "total_tokens": 157296,
+   "prompt_tokens": 125502,
+   "prefill_tokens": 125502,
+   "completion_tokens": 31794,
+   "decoding_tokens": 31794,
+   "reasoning_tokens": 300,
+   "cached_tokens": 23358,
+   "kv_cache_hit_tokens": 23358,
+   "cache_write_tokens": 0,
+   "kv_cache_hit_rate": 0.1861165559114596,
+   "input_cost": 0.003986814524978399,
+   "output_cost": 0.002372580114752054,
+   "cached_input_cost": 1.6350602891179733e-05,
+   "cache_write_input_cost": 0,
+   "request_cost": 0,
+   "cost": 0.006375744007527828,
+   "last_request_at": "2026-10-17 09:28:41.377289"
+  },
+  "last_24_hours": {
+   "requests": 289,
+   "errors": 18,
+   "total_tokens": 157296,
+   "prompt_tokens": 125502,
+   "prefill_tokens": 125502,
+   "completion_tokens": 31794,
+   "decoding_tokens": 31794,
+   "reasoning_tokens": 300,
+   "cached_tokens": 23358,
+   "kv_cache_hit_tokens": 23358,
+   "cache_write_tokens": 0,
+   "kv_cache_hit_rate": 0.1861165559114596,
+   "input_cost": 0.003986814524978399,
+   "output_cost": 0.002372580114752054,
+   "cached_input_cost": 1.6350602891179733e-05,
+   "cache_write_input_cost": 0,
+   "request_cost": 0,
+   "cost": 0.006375744007527828,
+   "last_request_at": "2026-10-17 09:28:41.377289"
+  },
+  "last_30_days": {
+   "requests": 289,
+   "errors": 18,
+   "total_tokens": 157296,
+   "prompt_tokens": 125502,
+   "prefill_tokens": 125502,
+   "completion_tokens": 31794,
+   "decoding_tokens": 31794,
+   "reasoning_tokens": 300,
+   "cached_tokens": 23358,
+   "kv_cache_hit_tokens": 23358,
+   "cache_write_tokens": 0,
+   "kv_cache_hit_rate": 0.1861165559114596,
+   "input_cost": 0.003986814524978399,
+   "output_cost": 0.002372580114752054,
+   "cached_input_cost": 1.6350602891179733e-05,
+   "cache_write_input_cost": 0,
+   "request_cost": 0,
+   "cost": 0.006375744007527828,
+   "last_request_at": "2026-10-17 09:28:41.377289"
+  },
+  "by_model": [
+   {
+    "model": "OmniVoice",
+    "requests": 180,
+    "errors": 13,
+    "total_tokens": 0,
+    "prompt_tokens": 0,
+    "prefill_tokens": 0,
+    "completion_tokens": 0,
+    "decoding_tokens": 0,
+    "reasoning_tokens": 0,
+    "cached_tokens": 0,
+    "kv_cache_hit_tokens": 0,
+    "cache_write_tokens": 0,
+    "kv_cache_hit_rate": 0,
+    "input_cost": 0.00030824512941762805,
+    "output_cost": 0,
+    "cached_input_cost": 0,
+    "cache_write_input_cost": 0,
+    "request_cost": 0,
+    "cost": 0.00030824512941762805,
+    "last_request_at": "2026-10-17 09:28:24.788144"
+   },
+   {
+    "model": "Gemma-4-31B-IT",
+    "requests": 103,
+    "errors": 0,
+    "total_tokens": 156010,
+    "prompt_tokens": 124516,
+    "prefill_tokens": 124516,
+    "completion_tokens": 31494,
+    "decoding_tokens": 31494,
+    "reasoning_tokens": 0,
+    "cached_tokens": 23358,
+    "kv_cache_hit_tokens": 23358,
+    "cache_write_tokens": 0,
+    "kv_cache_hit_rate": 0.1875903498345594,
+    "input_cost": 0.0035405298694968224,
+    "output_cost": 0.00220458023250103,
+    "cached_input_cost": 1.6350602891179733e-05,
+    "cache_write_input_cost": 0,
+    "request_cost": 0,
+    "cost": 0.005761460866779089,
+    "last_request_at": "2026-10-17 09:28:41.377289"
+   },
+   {
+    "model": "MiMo-V2.6-Flash",
+    "requests": 5,
+    "errors": 5,
+    "total_tokens": 0,
+    "prompt_tokens": 0,
+    "prefill_tokens": 0,
+    "completion_tokens": 0,
+    "decoding_tokens": 0,
+    "reasoning_tokens": 0,
+    "cached_tokens": 0,
+    "kv_cache_hit_tokens": 0,
+    "cache_write_tokens": 0,
+    "kv_cache_hit_rate": 0,
+    "input_cost": 0,
+    "output_cost": 0,
+    "cached_input_cost": 0,
+    "cache_write_input_cost": 0,
+    "request_cost": 0,
+    "cost": 0,
+    "last_request_at": "2026-10-16 21:33:15.213966"
+   },
+   {
+    "model": "Qwen3.8-Flash-Next",
+    "requests": 1,
+    "errors": 0,
+    "total_tokens": 1286,
+    "prompt_tokens": 986,
+    "prefill_tokens": 986,
+    "completion_tokens": 300,
+    "decoding_tokens": 300,
+    "reasoning_tokens": 300,
+    "cached_tokens": 0,
+    "kv_cache_hit_tokens": 0,
+    "cache_write_tokens": 0,
+    "kv_cache_hit_rate": 0,
+    "input_cost": 0.0001380400062771514,
+    "output_cost": 0.00016799999866634607,
+    "cached_input_cost": 0,
+    "cache_write_input_cost": 0,
+    "request_cost": 0,
+    "cost": 0.00030603999039158225,
+    "last_request_at": "2026-10-16 21:37:02.174292"
+   }
+  ],
+  "by_source": [
+   {
+    "source": "unspecified",
+    "requests": 289,
+    "errors": 18,
+    "last_request_at": "2026-10-17 09:28:41.377289"
+   }
+  ]
+ }
+}

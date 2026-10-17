@@ -1,0 +1,129 @@
+{
+  "id": "stride",
+  "name": "Stride — 15 s running shoe ad",
+  "sample": true,
+  "master_language": "en",
+  "canvas": {
+    "w": 720,
+    "h": 1280,
+    "fps": 30
+  },
+  "brand": {
+    "name": "Stride",
+    "about": "A fictional running-shoe brand (sample).",
+    "tone": "energetic, motivating, a little cheeky",
+    "never_change": [
+      "Stride"
+    ],
+    "colours": {
+      "accent": "#D1FE17",
+      "ink": "#05050A"
+    }
+  },
+  "music": "music.mp3",
+  "music_volume": 0.35,
+  "facts": [
+    {
+      "key": "PRODUCT",
+      "label": "Product",
+      "kind": "name",
+      "display": "Stride Air 2",
+      "spoken": {
+        "en": "Stride Air two",
+        "hi": "स्ट्राइड एयर टू",
+        "bn": "স্ট্রাইড এয়ার টু",
+        "it": "Stride Air due"
+      }
+    },
+    {
+      "key": "PRICE",
+      "label": "Price",
+      "kind": "price",
+      "display": {
+        "default": "₹2,999",
+        "it": "€59"
+      },
+      "spoken": {
+        "en": "two thousand nine hundred and ninety-nine rupees",
+        "hi": "दो हज़ार नौ सौ निन्यानवे रुपये",
+        "bn": "দু হাজার নশো নিরানব্বই টাকা",
+        "it": "cinquantanove euro"
+      }
+    },
+    {
+      "key": "OFFER",
+      "label": "Offer",
+      "kind": "offer",
+      "display": {
+        "en": "Free returns for 30 days",
+        "hi": "30 दिन में मुफ़्त वापसी",
+        "bn": "৩০ দিনে ফ্রি রিটার্ন",
+        "it": "Reso gratuito per 30 giorni"
+      },
+      "spoken": {
+        "en": "free returns for thirty days",
+        "hi": "तीस दिन में मुफ़्त वापसी",
+        "bn": "তিরিশ দিনে ফ্রি রিটার্ন",
+        "it": "reso gratuito per trenta giorni"
+      }
+    },
+    {
+      "key": "URL",
+      "label": "Website",
+      "kind": "url",
+      "display": "stride-run.in"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "start": 0,
+      "end": 3.4,
+      "clip": "clip1.mp4",
+      "clip_in": 0.2,
+      "line": {
+        "voice": "Your first run doesn't need to be fast. It just needs to happen.",
+        "screen": "Just start running."
+      }
+    },
+    {
+      "id": "s2",
+      "role": "product",
+      "start": 3.4,
+      "end": 7.4,
+      "clip": "clip2.mp4",
+      "clip_in": 0.2,
+      "line": {
+        "voice": "{PRODUCT}. Light, soft and made for city roads.",
+        "screen": "{PRODUCT}"
+      }
+    },
+    {
+      "id": "s3",
+      "role": "price",
+      "start": 7.4,
+      "end": 11.4,
+      "clip": "clip3.mp4",
+      "clip_in": 0.2,
+      "line": {
+        "voice": "Only {PRICE}, with {OFFER}.",
+        "screen": "{PRICE} · {OFFER}"
+      },
+      "text_band": "bottom",
+      "screen_max_words": 9
+    },
+    {
+      "id": "s4",
+      "role": "cta",
+      "start": 11.4,
+      "end": 15,
+      "clip": "clip4.mp4",
+      "clip_in": 0.2,
+      "line": {
+        "voice": "Lace up today.",
+        "screen": "Shop at {URL}"
+      }
+    }
+  ]
+}

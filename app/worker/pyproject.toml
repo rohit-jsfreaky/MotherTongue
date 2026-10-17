@@ -1,0 +1,21 @@
+[project]
+name = "mothertongue-worker"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "rohit-jsfreaky", email = "rohitkashyapmrt@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "num2words>=0.5.14",
+    "python-dotenv>=1.2.4",
+]
+
+[project.scripts]
+mothertongue-worker = "mothertongue_worker:main"
+
+[build-system]
+requires = ["uv_build>=0.10.0,<0.11.0"]
+build-backend = "uv_build"

@@ -1,0 +1,155 @@
+{
+  "id": "kettle-and-kadak",
+  "name": "Kettle & Kadak — 15 s launch ad",
+  "sample": true,
+  "master_language": "en",
+  "canvas": {
+    "w": 720,
+    "h": 1280,
+    "fps": 30
+  },
+  "brand": {
+    "name": "Kettle & Kadak",
+    "about": "A fictional masala chai premix brand (sample).",
+    "tone": "warm, homely, a little playful",
+    "never_change": [],
+    "colours": {
+      "accent": "#F2B33D",
+      "ink": "#1B1B1B"
+    }
+  },
+  "music": "music.mp3",
+  "music_volume": 0.35,
+  "facts": [
+    {
+      "key": "BRAND",
+      "label": "Brand name",
+      "kind": "name",
+      "display": "Kettle & Kadak",
+      "spoken": {
+        "en": "Kettle and Kadak",
+        "it": "Kettle and Kadak",
+        "hi": "केटल एंड कड़क",
+        "bn": "কেটল অ্যান্ড কড়ক"
+      }
+    },
+    {
+      "key": "PRICE",
+      "label": "Price",
+      "kind": "price",
+      "display": {
+        "default": "₹149",
+        "it": "€4,90"
+      },
+      "spoken": {
+        "en": "one hundred and forty-nine rupees",
+        "hi": "एक सौ उनचास रुपये",
+        "bn": "একশো ঊনপঞ্চাশ টাকা",
+        "it": "quattro euro e novanta"
+      }
+    },
+    {
+      "key": "OFFER",
+      "label": "Offer",
+      "kind": "offer",
+      "display": {
+        "en": "Buy 2, get 1 free",
+        "hi": "2 खरीदें, 1 मुफ़्त",
+        "bn": "২টো কিনলে ১টা ফ্রি",
+        "it": "Prendi 3, paghi 2"
+      },
+      "spoken": {
+        "en": "buy two, get one free",
+        "hi": "दो खरीदें, एक मुफ़्त",
+        "bn": "দুটো কিনলে একটা ফ্রি",
+        "it": "prendi tre, paghi due"
+      }
+    },
+    {
+      "key": "DEADLINE",
+      "label": "Offer ends",
+      "kind": "date",
+      "display": {
+        "en": "31 October",
+        "hi": "31 अक्टूबर",
+        "bn": "৩১ অক্টোবর",
+        "it": "31 ottobre"
+      },
+      "spoken": {
+        "en": "October thirty-first",
+        "hi": "इकतीस अक्टूबर",
+        "bn": "একত্রিশে অক্টোবর",
+        "it": "trentuno ottobre"
+      }
+    },
+    {
+      "key": "URL",
+      "label": "Website",
+      "kind": "url",
+      "display": "kettleandkadak.in"
+    },
+    {
+      "key": "LEGAL",
+      "label": "Legal line",
+      "kind": "legal",
+      "display": {
+        "en": "T&C apply. While stocks last.",
+        "hi": "शर्तें लागू। स्टॉक रहने तक।",
+        "bn": "শর্তাবলী প্রযোজ্য। স্টক থাকা পর্যন্ত।",
+        "it": "Si applicano termini e condizioni. Fino a esaurimento scorte."
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "start": 0.0,
+      "end": 3.4,
+      "clip": "clip1.mp4",
+      "clip_in": 0.2,
+      "line": {
+        "voice": "Long day ahead? You need a proper cup of chai.",
+        "screen": "Need a proper chai?"
+      }
+    },
+    {
+      "id": "s2",
+      "role": "product",
+      "start": 3.4,
+      "end": 7.4,
+      "clip": "clip2.mp4",
+      "clip_in": 0.2,
+      "line": {
+        "voice": "{BRAND}. Real ginger, real cardamom, that strong homemade taste.",
+        "screen": "{BRAND} · Real spices"
+      }
+    },
+    {
+      "id": "s3",
+      "role": "price",
+      "start": 7.4,
+      "end": 11.4,
+      "clip": "clip3.mp4",
+      "clip_in": 0.2,
+      "text_band": "bottom",
+      "screen_max_words": 9,
+      "line": {
+        "voice": "Just {PRICE} a box. And right now, {OFFER}.",
+        "screen": "{PRICE} · {OFFER}"
+      }
+    },
+    {
+      "id": "s4",
+      "role": "cta",
+      "start": 11.4,
+      "end": 15.0,
+      "clip": "clip4.mp4",
+      "clip_in": 0.2,
+      "line": {
+        "voice": "The offer runs till {DEADLINE}. Order yours today.",
+        "screen": "Order at {URL}"
+      }
+    }
+  ]
+}

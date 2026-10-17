@@ -1,0 +1,1595 @@
+{
+ "template": "stride",
+ "audiences": [
+  "kolkata-bn",
+  "lucknow-hi",
+  "milan-it",
+  "global-en"
+ ],
+ "finished_at": "2026-10-17T09:26:15.957299+00:00",
+ "wall_seconds": 187.0,
+ "see": {
+  "scenes": {
+   "s1": {
+    "text_on_screen": [],
+    "text_band": "none",
+    "subject": "white sneakers",
+    "subject_band": "bottom",
+    "free_band": "top",
+    "description": "A person reaches down to put on a pair of white sneakers on a wooden floor."
+   },
+   "s2": {
+    "text_on_screen": [],
+    "text_band": "none",
+    "subject": "orange sneakers",
+    "subject_band": "bottom",
+    "free_band": "top",
+    "description": "A top-down view of orange sneakers on a sandy surface."
+   },
+   "s3": {
+    "text_on_screen": [],
+    "text_band": "none",
+    "subject": "white and red sneaker",
+    "subject_band": "middle",
+    "free_band": "top",
+    "description": "A close-up of a person tying the laces of a white sneaker with a red sole."
+   },
+   "s4": {
+    "text_on_screen": [],
+    "text_band": "none",
+    "subject": "runner",
+    "subject_band": "middle",
+    "free_band": "top",
+    "description": "A low-angle shot of a man running towards the camera on a red athletic track."
+   }
+  },
+  "placement": {
+   "s1": "top",
+   "s2": "top",
+   "s3": "bottom",
+   "s4": "top"
+  }
+ },
+ "versions": [
+  {
+   "language": "bn",
+   "summary": "The version uses a warm, 'para' (neighborhood) friend tone with informal 'tumi' address to motivate the runner.",
+   "status": "ready",
+   "issues": [],
+   "lines": [
+    {
+     "voice": "দ্রুত হতে হবে না, শুধু শুরু করো।",
+     "screen": "দৌড়ানো শুরু করো",
+     "meaning": "No need to be fast, just start.",
+     "why": "Used a friendly, encouraging tone common in Kolkata's neighborhood peer groups.",
+     "scene": "s1",
+     "voice_filled": "দ্রুত হতে হবে না, শুধু শুরু করো।",
+     "screen_filled": "দৌড়ানো শুরু করো",
+     "meaning_filled": "No need to be fast, just start.",
+     "voice_seconds": 2.16,
+     "fit": "natural"
+    },
+    {
+     "voice": "{PRODUCT}। হালকা, আরামদায়ক আর শহরের জন্য।",
+     "screen": "{PRODUCT}",
+     "meaning": "{PRODUCT}. Light, comfortable and for the city.",
+     "why": "Used 'aramdayak' (comfortable) instead of just 'soft' to better suit the local preference for footwear feel.",
+     "scene": "s2",
+     "voice_filled": "স্ট্রাইড এয়ার টু। হালকা, আরামদায়ক আর শহরের জন্য।",
+     "screen_filled": "Stride Air 2",
+     "meaning_filled": "Stride Air 2. Light, comfortable and for the city.",
+     "voice_seconds": 3.88,
+     "fit": "squeezed"
+    },
+    {
+     "voice": "দাম মাত্র {PRICE}, সাথে {OFFER}।",
+     "screen": "{PRICE} · {OFFER}",
+     "meaning": "Price is only {PRICE}, with {OFFER}.",
+     "why": "Kept it direct and conversational as a friend would share a deal.",
+     "scene": "s3",
+     "voice_filled": "দাম মাত্র দু হাজার নশো নিরানব্বই টাকা, সাথে তিরিশ দিনে ফ্রি রিটার্ন।",
+     "screen_filled": "₹2,999 · ৩০ দিনে ফ্রি রিটার্ন",
+     "meaning_filled": "Price is only ₹2,999, with Free returns for 30 days.",
+     "voice_seconds": 3.88,
+     "fit": "squeezed"
+    },
+    {
+     "voice": "আজই জুতো জোড়া পরে নাও।",
+     "screen": "কিনুন {URL}-এ",
+     "meaning": "Put on the pair of shoes today.",
+     "why": "Translated 'lace up' to a more natural Bengali expression for getting ready to run.",
+     "scene": "s4",
+     "voice_filled": "আজই জুতো জোড়া পরে নাও।",
+     "screen_filled": "কিনুন stride-run.in-এ",
+     "meaning_filled": "Put on the pair of shoes today.",
+     "voice_seconds": 2.0,
+     "fit": "natural"
+    }
+   ],
+   "picture": [
+    {
+     "scene": "s1",
+     "facts": [],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s2",
+     "facts": [
+      {
+       "fact": "Product",
+       "expected": "Stride Air 2",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s3",
+     "facts": [
+      {
+       "fact": "Price",
+       "expected": "₹2,999",
+       "on_screen": true
+      },
+      {
+       "fact": "Offer",
+       "expected": "৩০ দিনে ফ্রি রিটার্ন",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s4",
+     "facts": [
+      {
+       "fact": "Website",
+       "expected": "stride-run.in",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    }
+   ],
+   "audience": "kolkata-bn",
+   "cost": {
+    "model_calls": 10,
+    "retried_or_failed_calls": 0,
+    "gemma_calls": 3,
+    "omnivoice_calls": 7,
+    "prompt_tokens": 3733,
+    "completion_tokens": 578,
+    "seconds_by_stage": {
+     "write": 17.2,
+     "voice": 77.0,
+     "factcheck": 3.1,
+     "render": 2.8,
+     "picture": 60.5
+    }
+   }
+  },
+  {
+   "language": "hi",
+   "summary": "The tone is shifted from a direct energetic push to a polite, inviting, and sophisticated Lucknowi style using formal address.",
+   "status": "needs_look",
+   "issues": [
+    {
+     "scene": "s3",
+     "field": "screen",
+     "code": "covers_subject",
+     "message": "text covers the product",
+     "by": "gemma",
+     "blocking": false
+    },
+    {
+     "scene": "s3",
+     "field": "screen",
+     "code": "picture_note",
+     "message": "The text box covers the shoe.",
+     "by": "gemma",
+     "blocking": false
+    }
+   ],
+   "lines": [
+    {
+     "voice": "रफ़्तार ज़रूरी नहीं, बस शुरुआत कीजिए।",
+     "screen": "बस शुरुआत कीजिए",
+     "meaning": "Speed isn't necessary, just make a start.",
+     "why": "Used 'kijiye' to reflect the polite and refined etiquette (tehzeeb) of Lucknow.",
+     "scene": "s1",
+     "voice_filled": "रफ़्तार ज़रूरी नहीं, बस शुरुआत कीजिए।",
+     "screen_filled": "बस शुरुआत कीजिए",
+     "meaning_filled": "Speed isn't necessary, just make a start.",
+     "voice_seconds": 2.48,
+     "fit": "natural"
+    },
+    {
+     "voice": "{PRODUCT}. हल्का, नरम और शहर के लिए।",
+     "screen": "{PRODUCT}",
+     "meaning": "{PRODUCT}. Light, soft and for the city.",
+     "why": "Kept it simple and elegant to match the city's sophisticated tone.",
+     "scene": "s2",
+     "voice_filled": "स्ट्राइड एयर टू. हल्का, नरम और शहर के लिए।",
+     "screen_filled": "Stride Air 2",
+     "meaning_filled": "Stride Air 2. Light, soft and for the city.",
+     "voice_seconds": 3.01,
+     "fit": "natural"
+    },
+    {
+     "voice": "सिर्फ {PRICE}, साथ में {OFFER}।",
+     "screen": "{PRICE} · {OFFER}",
+     "meaning": "Only {PRICE}, along with {OFFER}.",
+     "why": "Used a clean, polite structure to present the value proposition.",
+     "scene": "s3",
+     "voice_filled": "सिर्फ दो हज़ार नौ सौ निन्यानवे रुपये, साथ में तीस दिन में मुफ़्त वापसी।",
+     "screen_filled": "₹2,999 · 30 दिन में मुफ़्त वापसी",
+     "meaning_filled": "Only ₹2,999, along with Free returns for 30 days.",
+     "voice_seconds": 3.86,
+     "fit": "squeezed"
+    },
+    {
+     "voice": "आज ही कदम बढ़ाइए।",
+     "screen": "Shop at {URL}",
+     "meaning": "Take a step forward today.",
+     "why": "Used 'kadam badhaiye' as a graceful way to encourage action instead of a literal translation of lacing shoes.",
+     "scene": "s4",
+     "voice_filled": "आज ही कदम बढ़ाइए।",
+     "screen_filled": "Shop at stride-run.in",
+     "meaning_filled": "Take a step forward today.",
+     "voice_seconds": 1.5,
+     "fit": "natural"
+    }
+   ],
+   "picture": [
+    {
+     "scene": "s1",
+     "facts": [],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s2",
+     "facts": [
+      {
+       "fact": "Product",
+       "expected": "Stride Air 2",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s3",
+     "facts": [
+      {
+       "fact": "Price",
+       "expected": "₹2,999",
+       "on_screen": true
+      },
+      {
+       "fact": "Offer",
+       "expected": "30 दिन में मुफ़्त वापसी",
+       "on_screen": true
+      }
+     ],
+     "problem": "The text box covers the shoe.",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s4",
+     "facts": [
+      {
+       "fact": "Website",
+       "expected": "stride-run.in",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    }
+   ],
+   "audience": "lucknow-hi",
+   "cost": {
+    "model_calls": 9,
+    "retried_or_failed_calls": 0,
+    "gemma_calls": 3,
+    "omnivoice_calls": 6,
+    "prompt_tokens": 3737,
+    "completion_tokens": 572,
+    "seconds_by_stage": {
+     "write": 16.0,
+     "voice": 68.6,
+     "factcheck": 3.5,
+     "render": 2.7,
+     "picture": 39.8
+    }
+   }
+  },
+  {
+   "language": "it",
+   "summary": "The version is more direct, urban, and fast-paced to match the stylish and efficient vibe of Milan.",
+   "status": "needs_look",
+   "issues": [
+    {
+     "scene": "s3",
+     "field": "screen",
+     "code": "covers_subject",
+     "message": "text covers the product",
+     "by": "gemma",
+     "blocking": false
+    },
+    {
+     "scene": "s3",
+     "field": "screen",
+     "code": "picture_note",
+     "message": "Text covers the product.",
+     "by": "gemma",
+     "blocking": false
+    }
+   ],
+   "lines": [
+    {
+     "voice": "Non serve correre veloci. Basta partire.",
+     "screen": "Inizia a correre.",
+     "meaning": "You don't need to run fast. Just start.",
+     "why": "Milanese style is direct and efficient; I removed the fluff to make it punchier.",
+     "scene": "s1",
+     "voice_filled": "Non serve correre veloci. Basta partire.",
+     "screen_filled": "Inizia a correre.",
+     "meaning_filled": "You don't need to run fast. Just start.",
+     "voice_seconds": 2.62,
+     "fit": "natural"
+    },
+    {
+     "voice": "{PRODUCT}. Leggere, morbide, nate per la città.",
+     "screen": "{PRODUCT}",
+     "meaning": "{PRODUCT}. Light, soft, born for the city.",
+     "why": "Used 'nate per la città' (born for the city) to appeal to the urban, stylish identity of Milan.",
+     "scene": "s2",
+     "voice_filled": "Stride Air due. Leggere, morbide, nate per la città.",
+     "screen_filled": "Stride Air 2",
+     "meaning_filled": "Stride Air 2. Light, soft, born for the city.",
+     "voice_seconds": 3.28,
+     "fit": "natural"
+    },
+    {
+     "voice": "A soli {PRICE}, con {OFFER}.",
+     "screen": "{PRICE} · {OFFER}",
+     "meaning": "At only {PRICE}, with {OFFER}.",
+     "why": "Kept it clean and fast-paced to match the city's rhythm.",
+     "scene": "s3",
+     "voice_filled": "A soli cinquantanove euro, con reso gratuito per trenta giorni.",
+     "screen_filled": "€59 · Reso gratuito per 30 giorni",
+     "meaning_filled": "At only ₹2,999, with Free returns for 30 days.",
+     "voice_seconds": 3.88,
+     "fit": "squeezed"
+    },
+    {
+     "voice": "Allacciati e vai.",
+     "screen": "Scoprile su {URL}",
+     "meaning": "Lace up and go.",
+     "why": "Changed 'Lace up today' to a more dynamic 'Lace up and go' which sounds more natural and motivating in Italian.",
+     "scene": "s4",
+     "voice_filled": "Allacciati e vai.",
+     "screen_filled": "Scoprile su stride-run.in",
+     "meaning_filled": "Lace up and go.",
+     "voice_seconds": 1.57,
+     "fit": "natural"
+    }
+   ],
+   "picture": [
+    {
+     "scene": "s1",
+     "facts": [],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s2",
+     "facts": [
+      {
+       "fact": "Product",
+       "expected": "Stride Air 2",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s3",
+     "facts": [
+      {
+       "fact": "Price",
+       "expected": "€59",
+       "on_screen": true
+      },
+      {
+       "fact": "Offer",
+       "expected": "Reso gratuito per 30 giorni",
+       "on_screen": true
+      }
+     ],
+     "problem": "Text covers the product.",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s4",
+     "facts": [
+      {
+       "fact": "Website",
+       "expected": "stride-run.in",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    }
+   ],
+   "audience": "milan-it",
+   "cost": {
+    "model_calls": 9,
+    "retried_or_failed_calls": 0,
+    "gemma_calls": 3,
+    "omnivoice_calls": 6,
+    "prompt_tokens": 3690,
+    "completion_tokens": 582,
+    "seconds_by_stage": {
+     "write": 17.4,
+     "voice": 74.6,
+     "factcheck": 2.0,
+     "render": 2.7,
+     "picture": 59.1
+    }
+   }
+  },
+  {
+   "language": "en",
+   "summary": "The tone was shifted from a slightly formal instructional style to a warmer, more inclusive and encouraging global English approach.",
+   "status": "needs_look",
+   "issues": [
+    {
+     "scene": "s3",
+     "field": "screen",
+     "code": "covers_subject",
+     "message": "text covers the product",
+     "by": "gemma",
+     "blocking": false
+    },
+    {
+     "scene": "s3",
+     "field": "screen",
+     "code": "picture_note",
+     "message": "The text box covers part of the shoe.",
+     "by": "gemma",
+     "blocking": false
+    }
+   ],
+   "lines": [
+    {
+     "voice": "Forget the pace. Just get moving.",
+     "screen": "Just get moving.",
+     "meaning": "Don't worry about how fast you are, just start.",
+     "why": "Simplified the phrasing to be warmer and more encouraging for a global audience.",
+     "scene": "s1",
+     "voice_filled": "Forget the pace. Just get moving.",
+     "screen_filled": "Just get moving.",
+     "meaning_filled": "Don't worry about how fast you are, just start.",
+     "voice_seconds": 2.24,
+     "fit": "natural"
+    },
+    {
+     "voice": "{PRODUCT}. Light, comfy, and ready for the city.",
+     "screen": "{PRODUCT}",
+     "meaning": "Introducing the product as lightweight and suitable for urban environments.",
+     "why": "Replaced 'soft' with 'comfy' for a more natural, friendly global English feel.",
+     "scene": "s2",
+     "voice_filled": "Stride Air two. Light, comfy, and ready for the city.",
+     "screen_filled": "Stride Air 2",
+     "meaning_filled": "Introducing the product as lightweight and suitable for urban environments.",
+     "voice_seconds": 3.32,
+     "fit": "natural"
+    },
+    {
+     "voice": "{PRICE}, plus {OFFER}.",
+     "screen": "{PRICE} | {OFFER}",
+     "meaning": "Get the item for the specified price and the additional offer.",
+     "why": "Used 'Get yours' to create a warmer, more inviting tone than 'Only'. Shortened to fit the scene.",
+     "scene": "s3",
+     "voice_before_shorten": "Get yours for {PRICE}, plus {OFFER}.",
+     "voice_filled": "two thousand nine hundred and ninety-nine rupees, plus free returns for thirty days.",
+     "screen_filled": "₹2,999 | Free returns for 30 days",
+     "meaning_filled": "Get the item for the specified price and the additional offer.",
+     "voice_seconds": 3.88,
+     "fit": "shortened+squeezed"
+    },
+    {
+     "voice": "Ready? Lace up today.",
+     "screen": "Shop at {URL}",
+     "meaning": "A call to action to start running and buy the shoes.",
+     "why": "Added a friendly question to engage the viewer before the final call to action.",
+     "scene": "s4",
+     "voice_filled": "Ready? Lace up today.",
+     "screen_filled": "Shop at stride-run.in",
+     "meaning_filled": "A call to action to start running and buy the shoes.",
+     "voice_seconds": 1.92,
+     "fit": "natural"
+    }
+   ],
+   "picture": [
+    {
+     "scene": "s1",
+     "facts": [],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s2",
+     "facts": [
+      {
+       "fact": "Product",
+       "expected": "Stride Air 2",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s3",
+     "facts": [
+      {
+       "fact": "Price",
+       "expected": "₹2,999",
+       "on_screen": true
+      },
+      {
+       "fact": "Offer",
+       "expected": "Free returns for 30 days",
+       "on_screen": true
+      }
+     ],
+     "problem": "The text box covers part of the shoe.",
+     "main_text_shown": true,
+     "other_numbers": []
+    },
+    {
+     "scene": "s4",
+     "facts": [
+      {
+       "fact": "Website",
+       "expected": "stride-run.in",
+       "on_screen": true
+      }
+     ],
+     "problem": "",
+     "main_text_shown": true,
+     "other_numbers": []
+    }
+   ],
+   "audience": "global-en",
+   "cost": {
+    "model_calls": 11,
+    "retried_or_failed_calls": 0,
+    "gemma_calls": 4,
+    "omnivoice_calls": 7,
+    "prompt_tokens": 3861,
+    "completion_tokens": 601,
+    "seconds_by_stage": {
+     "write": 15.6,
+     "voice": 74.5,
+     "factcheck": 8.9,
+     "render": 3.8,
+     "picture": 54.3
+    }
+   }
+  }
+ ],
+ "failed": {},
+ "all_calls": [
+  {
+   "stage": "see",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792228989.364438,
+   "seconds": 25.609999999999673,
+   "attempt": 1,
+   "response_id": "135abfd90de74763a089d5ba23162d52",
+   "prompt_tokens": 1355,
+   "completion_tokens": 269,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99497639",
+    "x-ratelimit-remaining-user-rpm": "16",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00502361"
+   }
+  },
+  {
+   "stage": "adapt",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229015.0089428,
+   "seconds": 15.609999999999673,
+   "attempt": 1,
+   "response_id": "29771c1c0b754a568c8e758d87a371ee",
+   "prompt_tokens": 1314,
+   "completion_tokens": 298,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99491943",
+    "x-ratelimit-remaining-user-rpm": "13",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00508057"
+   },
+   "job": "global-en:global-en:1792229015005515000"
+  },
+  {
+   "stage": "adapt",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229014.973344,
+   "seconds": 16.03099999999995,
+   "attempt": 1,
+   "response_id": "12a7ddfae79b44b1a89e6daf3d2eab3b",
+   "prompt_tokens": 1338,
+   "completion_tokens": 303,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99491943",
+    "x-ratelimit-remaining-user-rpm": "13",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00508057"
+   },
+   "job": "lucknow-hi:lucknow-hi:1792229014973343900"
+  },
+  {
+   "stage": "adapt",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229014.9712026,
+   "seconds": 17.20300000000043,
+   "attempt": 1,
+   "response_id": "a80408b434a248499b1d441f5efbb9cc",
+   "prompt_tokens": 1338,
+   "completion_tokens": 315,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99491943",
+    "x-ratelimit-remaining-user-rpm": "15",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00508057"
+   },
+   "job": "kolkata-bn:kolkata-bn:1792229014971202500"
+  },
+  {
+   "stage": "adapt",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229014.973344,
+   "seconds": 17.436999999999898,
+   "attempt": 1,
+   "response_id": "fdc4718e1d0b4e668827b22482aa88dd",
+   "prompt_tokens": 1319,
+   "completion_tokens": 315,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99491943",
+    "x-ratelimit-remaining-user-rpm": "14",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00508057"
+   },
+   "job": "milan-it:milan-it:1792229014973343900"
+  },
+  {
+   "stage": "voice-ref",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229030.6348774,
+   "seconds": 2.8599999999996726,
+   "attempt": 1,
+   "output_bytes": 218924,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99480800",
+    "x-ratelimit-remaining-user-rpm": "13",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00519200"
+   },
+   "job": "global-en:global-en:1792229015005515000"
+  },
+  {
+   "stage": "voice-ref",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229030.9929044,
+   "seconds": 3.3590000000003783,
+   "attempt": 1,
+   "output_bytes": 245804,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99480800",
+    "x-ratelimit-remaining-user-rpm": "12",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00519200"
+   },
+   "job": "lucknow-hi:lucknow-hi:1792229014973343900"
+  },
+  {
+   "stage": "voice-ref",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229032.170339,
+   "seconds": 2.889999999999418,
+   "attempt": 1,
+   "output_bytes": 268844,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99474798",
+    "x-ratelimit-remaining-user-rpm": "11",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00525202"
+   },
+   "job": "kolkata-bn:kolkata-bn:1792229014971202500"
+  },
+  {
+   "stage": "voice-ref",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229032.4076738,
+   "seconds": 3.5780000000004293,
+   "attempt": 1,
+   "output_bytes": 228524,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99474798",
+    "x-ratelimit-remaining-user-rpm": "10",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00525202"
+   },
+   "job": "milan-it:milan-it:1792229014973343900"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229034.3667285,
+   "seconds": 4.421999999999571,
+   "attempt": 1,
+   "output_bytes": 159404,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99468349",
+    "x-ratelimit-remaining-user-rpm": "10",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00531651"
+   },
+   "job": "global-en:global-en:1792229015005515000"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229035.9829168,
+   "seconds": 4.375,
+   "attempt": 1,
+   "output_bytes": 92204,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99468163",
+    "x-ratelimit-remaining-user-rpm": "9",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00531837"
+   },
+   "job": "global-en:global-en:1792229015005515000"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229033.538887,
+   "seconds": 7.717999999999847,
+   "attempt": 1,
+   "output_bytes": 107564,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99468163",
+    "x-ratelimit-remaining-user-rpm": "8",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00531837"
+   },
+   "job": "global-en:global-en:1792229015005515000"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229038.7774556,
+   "seconds": 4.016000000000531,
+   "attempt": 1,
+   "output_bytes": 119084,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99468163",
+    "x-ratelimit-remaining-user-rpm": "7",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00531837"
+   },
+   "job": "lucknow-hi:lucknow-hi:1792229014973343900"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229040.360476,
+   "seconds": 3.4849999999996726,
+   "attempt": 1,
+   "output_bytes": 144524,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99467974",
+    "x-ratelimit-remaining-user-rpm": "6",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00532026"
+   },
+   "job": "lucknow-hi:lucknow-hi:1792229014973343900"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229042.8044174,
+   "seconds": 2.608999999999469,
+   "attempt": 1,
+   "output_bytes": 72044,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99467698",
+    "x-ratelimit-remaining-user-rpm": "5",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00532302"
+   },
+   "job": "lucknow-hi:lucknow-hi:1792229014973343900"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229043.8431263,
+   "seconds": 2.625,
+   "attempt": 1,
+   "output_bytes": 103724,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99467698",
+    "x-ratelimit-remaining-user-rpm": "4",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00532302"
+   },
+   "job": "kolkata-bn:kolkata-bn:1792229014971202500"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229035.0633745,
+   "seconds": 15.32800000000043,
+   "attempt": 1,
+   "output_bytes": 305324,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99467529",
+    "x-ratelimit-remaining-user-rpm": "3",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00532471"
+   },
+   "job": "global-en:global-en:1792229015005515000"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229049.4124396,
+   "seconds": 3.2030000000004293,
+   "attempt": 1,
+   "output_bytes": 184364,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99467186",
+    "x-ratelimit-remaining-user-rpm": "2",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00532814"
+   },
+   "job": "kolkata-bn:kolkata-bn:1792229014971202500"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229041.2642896,
+   "seconds": 15.344000000000051,
+   "attempt": 1,
+   "output_bytes": 196844,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99467015",
+    "x-ratelimit-remaining-user-rpm": "1",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00532985"
+   },
+   "job": "lucknow-hi:lucknow-hi:1792229014973343900"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229075.0349245,
+   "seconds": 6.375,
+   "attempt": 1,
+   "output_bytes": 157484,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99466767",
+    "x-ratelimit-remaining-user-rpm": "5",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00533233"
+   },
+   "job": "milan-it:milan-it:1792229014973343900"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229075.0319068,
+   "seconds": 7.030999999999949,
+   "attempt": 1,
+   "output_bytes": 125804,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99466767",
+    "x-ratelimit-remaining-user-rpm": "4",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00533233"
+   },
+   "job": "milan-it:milan-it:1792229014973343900"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229075.0239651,
+   "seconds": 9.29700000000048,
+   "attempt": 1,
+   "output_bytes": 217004,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99466767",
+    "x-ratelimit-remaining-user-rpm": "3",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00533233"
+   },
+   "job": "kolkata-bn:kolkata-bn:1792229014971202500"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229075.0239651,
+   "seconds": 10.094000000000051,
+   "attempt": 1,
+   "output_bytes": 96044,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99466767",
+    "x-ratelimit-remaining-user-rpm": "2",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00533233"
+   },
+   "job": "kolkata-bn:kolkata-bn:1792229014971202500"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229090.6953561,
+   "seconds": 5.640999999999622,
+   "attempt": 1,
+   "output_bytes": 195884,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99466130",
+    "x-ratelimit-remaining-user-rpm": "4",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00533870"
+   },
+   "job": "milan-it:milan-it:1792229014973343900"
+  },
+  {
+   "stage": "shorten",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229091.0653172,
+   "seconds": 5.5,
+   "attempt": 1,
+   "response_id": "577fb868145c4193b311baeaea7d6f11",
+   "prompt_tokens": 177,
+   "completion_tokens": 29,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99466130",
+    "x-ratelimit-remaining-user-rpm": "3",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00533870"
+   },
+   "job": "global-en:global-en:1792229015005515000"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229092.4705324,
+   "seconds": 5.592999999999847,
+   "attempt": 1,
+   "output_bytes": 186284,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99466130",
+    "x-ratelimit-remaining-user-rpm": "3",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00533870"
+   },
+   "job": "kolkata-bn:kolkata-bn:1792229014971202500"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229096.337754,
+   "seconds": 3.2340000000003783,
+   "attempt": 1,
+   "output_bytes": 185324,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99465909",
+    "x-ratelimit-remaining-user-rpm": "3",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00534091"
+   },
+   "job": "lucknow-hi:lucknow-hi:1792229014973343900"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229098.0626802,
+   "seconds": 2.844000000000051,
+   "attempt": 1,
+   "output_bytes": 186284,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99464997",
+    "x-ratelimit-remaining-user-rpm": "3",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00535003"
+   },
+   "job": "milan-it:milan-it:1792229014973343900"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229099.5710275,
+   "seconds": 3.20299999999952,
+   "attempt": 1,
+   "output_bytes": 265004,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99464749",
+    "x-ratelimit-remaining-user-rpm": "4",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00535251"
+   },
+   "job": "global-en:global-en:1792229015005515000"
+  },
+  {
+   "stage": "factcheck",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229100.9082124,
+   "seconds": 2.188000000000102,
+   "attempt": 1,
+   "response_id": "0811aacd6e3d486f8c675f07f835db9c",
+   "prompt_tokens": 749,
+   "completion_tokens": 6,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99464528",
+    "x-ratelimit-remaining-user-rpm": "4",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00535472"
+   },
+   "job": "lucknow-hi:lucknow-hi:1792229014973343900"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229102.7855473,
+   "seconds": 2.391000000000531,
+   "attempt": 1,
+   "output_bytes": 186284,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99464234",
+    "x-ratelimit-remaining-user-rpm": "3",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00535766"
+   },
+   "job": "global-en:global-en:1792229015005515000"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229092.240965,
+   "seconds": 14.734999999999673,
+   "attempt": 1,
+   "output_bytes": 75404,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99464234",
+    "x-ratelimit-remaining-user-rpm": "4",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00535766"
+   },
+   "job": "milan-it:milan-it:1792229014973343900"
+  },
+  {
+   "stage": "factcheck",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229106.9657116,
+   "seconds": 2.0,
+   "attempt": 1,
+   "response_id": "33e6f919320841f2ae3f80a0296b63c4",
+   "prompt_tokens": 731,
+   "completion_tokens": 6,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99461900",
+    "x-ratelimit-remaining-user-rpm": "1",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00538100"
+   },
+   "job": "milan-it:milan-it:1792229014973343900"
+  },
+  {
+   "stage": "voice",
+   "model": "OmniVoice",
+   "endpoint": "/audio/speech",
+   "status": 200,
+   "started_at": 1792229096.5676978,
+   "seconds": 12.57800000000043,
+   "attempt": 1,
+   "output_bytes": 186284,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99461959",
+    "x-ratelimit-remaining-user-rpm": "2",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00538041"
+   },
+   "job": "kolkata-bn:kolkata-bn:1792229014971202500"
+  },
+  {
+   "stage": "factcheck",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229109.461236,
+   "seconds": 2.7650000000003274,
+   "attempt": 1,
+   "response_id": "a8c13fdd6afd4160b94ee277b7a0ac27",
+   "prompt_tokens": 748,
+   "completion_tokens": 6,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99459744",
+    "x-ratelimit-remaining-user-rpm": "1",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00540256"
+   },
+   "job": "kolkata-bn:kolkata-bn:1792229014971202500"
+  },
+  {
+   "stage": "factcheck",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229105.1713605,
+   "seconds": 8.92199999999957,
+   "attempt": 1,
+   "response_id": "e70bd53f26594c7eafb3b3eee9f4c866",
+   "prompt_tokens": 732,
+   "completion_tokens": 9,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99461959",
+    "x-ratelimit-remaining-user-rpm": "3",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00538041"
+   },
+   "job": "global-en:global-en:1792229015005515000"
+  },
+  {
+   "stage": "check-picture",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229106.2020512,
+   "seconds": 39.35899999999947,
+   "attempt": 1,
+   "response_id": "83a63727580a437b9a8d933204dcf9fe",
+   "prompt_tokens": 1650,
+   "completion_tokens": 263,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99461959",
+    "x-ratelimit-remaining-user-rpm": "1",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00538041"
+   },
+   "job": "lucknow-hi:lucknow-hi:1792229014973343900"
+  },
+  {
+   "stage": "check-picture",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229135.0929174,
+   "seconds": 35.67100000000028,
+   "attempt": 1,
+   "response_id": "6019f59d92a64b6080c0cf4ab9c54343",
+   "prompt_tokens": 1640,
+   "completion_tokens": 261,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99455828",
+    "x-ratelimit-remaining-user-rpm": "3",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00544172"
+   },
+   "job": "milan-it:milan-it:1792229014973343900"
+  },
+  {
+   "stage": "check-picture",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229135.1000726,
+   "seconds": 37.04600000000028,
+   "attempt": 1,
+   "response_id": "47b6a26b50b64ea092b2818741d17b15",
+   "prompt_tokens": 1638,
+   "completion_tokens": 265,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99455828",
+    "x-ratelimit-remaining-user-rpm": "3",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00544172"
+   },
+   "job": "global-en:global-en:1792229015005515000"
+  },
+  {
+   "stage": "check-picture",
+   "model": "Gemma-4-31B-IT",
+   "endpoint": "/chat/completions",
+   "status": 200,
+   "started_at": 1792229135.0980618,
+   "seconds": 40.4369999999999,
+   "attempt": 1,
+   "response_id": "6c85b6858c024e7eaf48044cc520fc90",
+   "prompt_tokens": 1647,
+   "completion_tokens": 257,
+   "ratelimit": {
+    "x-ratelimit-limit-user-daily-usd": "1",
+    "x-ratelimit-limit-user-rpm": "20",
+    "x-ratelimit-remaining-user-daily-usd": "0.99455828",
+    "x-ratelimit-remaining-user-rpm": "3",
+    "x-ratelimit-reset-user-daily-usd": "1792252800",
+    "x-ratelimit-used-user-daily-usd": "0.00544172"
+   },
+   "job": "kolkata-bn:kolkata-bn:1792229014971202500"
+  }
+ ],
+ "usage_after": {
+  "organization_id": "oneclick-org-82211",
+  "project_id": "oneclick-project-82211",
+  "rpm_limit": 20,
+  "daily_cost_limit_usd": 1,
+  "daily_cost_used_usd": 0.005700890440493822,
+  "daily_cost_remaining_usd": 0.9942991095595062,
+  "daily_reset_timezone": "Asia/Shanghai",
+  "daily_reset_at": "2026-10-17T16:00:00.000Z",
+  "daily_reset_epoch": 1792252800,
+  "period_started_at": "2026-10-16T16:00:00.000Z",
+  "period_duration_value": 1,
+  "period_duration_unit": "day",
+  "window_hours": 24,
+  "recent_limit": 200,
+  "all_time": {
+   "requests": 253,
+   "errors": 18,
+   "total_tokens": 138294,
+   "prompt_tokens": 109461,
+   "prefill_tokens": 109461,
+   "completion_tokens": 28833,
+   "decoding_tokens": 28833,
+   "reasoning_tokens": 300,
+   "cached_tokens": 19482,
+   "kv_cache_hit_tokens": 19482,
+   "cache_write_tokens": 0,
+   "kv_cache_hit_rate": 0.17798119878312824,
+   "input_cost": 0.003521945094689727,
+   "output_cost": 0.0021653103176504374,
+   "cached_input_cost": 1.3637402844324242e-05,
+   "cache_write_input_cost": 0,
+   "request_cost": 0,
+   "cost": 0.005700890440493822,
+   "last_request_at": "2026-10-17 09:26:18.123686"
+  },
+  "today": {
+   "requests": 253,
+   "errors": 18,
+   "total_tokens": 138294,
+   "prompt_tokens": 109461,
+   "prefill_tokens": 109461,
+   "completion_tokens": 28833,
+   "decoding_tokens": 28833,
+   "reasoning_tokens": 300,
+   "cached_tokens": 19482,
+   "kv_cache_hit_tokens": 19482,
+   "cache_write_tokens": 0,
+   "kv_cache_hit_rate": 0.17798119878312824,
+   "input_cost": 0.003521945094689727,
+   "output_cost": 0.0021653103176504374,
+   "cached_input_cost": 1.3637402844324242e-05,
+   "cache_write_input_cost": 0,
+   "request_cost": 0,
+   "cost": 0.005700890440493822,
+   "last_request_at": "2026-10-17 09:26:18.123686"
+  },
+  "last_24_hours": {
+   "requests": 253,
+   "errors": 18,
+   "total_tokens": 138294,
+   "prompt_tokens": 109461,
+   "prefill_tokens": 109461,
+   "completion_tokens": 28833,
+   "decoding_tokens": 28833,
+   "reasoning_tokens": 300,
+   "cached_tokens": 19482,
+   "kv_cache_hit_tokens": 19482,
+   "cache_write_tokens": 0,
+   "kv_cache_hit_rate": 0.17798119878312824,
+   "input_cost": 0.003521945094689727,
+   "output_cost": 0.0021653103176504374,
+   "cached_input_cost": 1.3637402844324242e-05,
+   "cache_write_input_cost": 0,
+   "request_cost": 0,
+   "cost": 0.005700890440493822,
+   "last_request_at": "2026-10-17 09:26:18.123686"
+  },
+  "last_30_days": {
+   "requests": 253,
+   "errors": 18,
+   "total_tokens": 138294,
+   "prompt_tokens": 109461,
+   "prefill_tokens": 109461,
+   "completion_tokens": 28833,
+   "decoding_tokens": 28833,
+   "reasoning_tokens": 300,
+   "cached_tokens": 19482,
+   "kv_cache_hit_tokens": 19482,
+   "cache_write_tokens": 0,
+   "kv_cache_hit_rate": 0.17798119878312824,
+   "input_cost": 0.003521945094689727,
+   "output_cost": 0.0021653103176504374,
+   "cached_input_cost": 1.3637402844324242e-05,
+   "cache_write_input_cost": 0,
+   "request_cost": 0,
+   "cost": 0.005700890440493822,
+   "last_request_at": "2026-10-17 09:26:18.123686"
+  },
+  "by_model": [
+   {
+    "model": "OmniVoice",
+    "requests": 157,
+    "errors": 13,
+    "total_tokens": 0,
+    "prompt_tokens": 0,
+    "prefill_tokens": 0,
+    "completion_tokens": 0,
+    "decoding_tokens": 0,
+    "reasoning_tokens": 0,
+    "cached_tokens": 0,
+    "kv_cache_hit_tokens": 0,
+    "cache_write_tokens": 0,
+    "kv_cache_hit_rate": 0,
+    "input_cost": 0.00026915009948424995,
+    "output_cost": 0,
+    "cached_input_cost": 0,
+    "cache_write_input_cost": 0,
+    "request_cost": 0,
+    "cost": 0.00026915009948424995,
+    "last_request_at": "2026-10-17 09:25:10.963623"
+   },
+   {
+    "model": "Gemma-4-31B-IT",
+    "requests": 90,
+    "errors": 0,
+    "total_tokens": 137008,
+    "prompt_tokens": 108475,
+    "prefill_tokens": 108475,
+    "completion_tokens": 28533,
+    "decoding_tokens": 28533,
+    "reasoning_tokens": 0,
+    "cached_tokens": 19482,
+    "kv_cache_hit_tokens": 19482,
+    "cache_write_tokens": 0,
+    "kv_cache_hit_rate": 0.17959898594146118,
+    "input_cost": 0.003114755265414715,
+    "output_cost": 0.001997309736907482,
+    "cached_input_cost": 1.3637401025334839e-05,
+    "cache_write_input_cost": 0,
+    "request_cost": 0,
+    "cost": 0.005125701427459717,
+    "last_request_at": "2026-10-17 09:26:18.123686"
+   },
+   {
+    "model": "MiMo-V2.6-Flash",
+    "requests": 5,
+    "errors": 5,
+    "total_tokens": 0,
+    "prompt_tokens": 0,
+    "prefill_tokens": 0,
+    "completion_tokens": 0,
+    "decoding_tokens": 0,
+    "reasoning_tokens": 0,
+    "cached_tokens": 0,
+    "kv_cache_hit_tokens": 0,
+    "cache_write_tokens": 0,
+    "kv_cache_hit_rate": 0,
+    "input_cost": 0,
+    "output_cost": 0,
+    "cached_input_cost": 0,
+    "cache_write_input_cost": 0,
+    "request_cost": 0,
+    "cost": 0,
+    "last_request_at": "2026-10-16 21:33:15.213966"
+   },
+   {
+    "model": "Qwen3.8-Flash-Next",
+    "requests": 1,
+    "errors": 0,
+    "total_tokens": 1286,
+    "prompt_tokens": 986,
+    "prefill_tokens": 986,
+    "completion_tokens": 300,
+    "decoding_tokens": 300,
+    "reasoning_tokens": 300,
+    "cached_tokens": 0,
+    "kv_cache_hit_tokens": 0,
+    "cache_write_tokens": 0,
+    "kv_cache_hit_rate": 0,
+    "input_cost": 0.0001380400062771514,
+    "output_cost": 0.00016799999866634607,
+    "cached_input_cost": 0,
+    "cache_write_input_cost": 0,
+    "request_cost": 0,
+    "cost": 0.00030603999039158225,
+    "last_request_at": "2026-10-16 21:37:02.174292"
+   }
+  ],
+  "by_source": [
+   {
+    "source": "unspecified",
+    "requests": 253,
+    "errors": 18,
+    "last_request_at": "2026-10-17 09:26:18.123686"
+   }
+  ]
+ }
+}

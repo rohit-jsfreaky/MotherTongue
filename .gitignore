@@ -1,0 +1,40 @@
+# ── Secrets (never commit) ──────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Private notes and planning docs: only the public READMEs + hackathon.md go to GitHub ──
+*.md
+!/README.md
+!/hackathon.md
+!/app/worker/README.md
+.claude/
+.agents/
+
+# ── Local research captures, browser automation, scratch ────────────────
+research/
+.playwright-mcp/
+
+# ── Python worker ───────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+.venv/
+app/worker/out/
+
+# ── Web app (also covered by app/web/.gitignore) ────────────────────────
+node_modules/
+.next/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+
+# ── Supabase CLI local state ────────────────────────────────────────────
+app/supabase/.temp/
+app/supabase/.branches/
+
+# ── OS / editor ─────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

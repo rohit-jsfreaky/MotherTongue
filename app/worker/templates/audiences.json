@@ -1,0 +1,14 @@
+[
+  {"id": "kolkata-bn", "label": "Kolkata · Bengali", "city": "Kolkata", "language": "bn",
+   "tone": "warm and informal, like a friend from the neighbourhood (use 'tumi')", "notes": "",
+   "voice": "female, young adult"},
+  {"id": "lucknow-hi", "label": "Lucknow · Hindi", "city": "Lucknow", "language": "hi",
+   "tone": "friendly and polite, with a touch of Lucknowi charm", "notes": "",
+   "voice": "male, young adult"},
+  {"id": "milan-it", "label": "Milan · Italian", "city": "Milan", "language": "it",
+   "tone": "quick, stylish and a little witty", "notes": "",
+   "voice": "female, young adult"},
+  {"id": "global-en", "label": "Global · English", "city": "", "language": "en",
+   "tone": "clear, warm and friendly", "notes": "",
+   "voice": "female, young adult"}
+]

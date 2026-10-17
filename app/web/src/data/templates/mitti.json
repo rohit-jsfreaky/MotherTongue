@@ -1,0 +1,129 @@
+{
+  "id": "mitti",
+  "name": "Mitti — 15 s skincare ad",
+  "sample": true,
+  "master_language": "en",
+  "canvas": {
+    "w": 720,
+    "h": 1280,
+    "fps": 30
+  },
+  "brand": {
+    "name": "Mitti",
+    "about": "A fictional natural skincare brand (sample).",
+    "tone": "calm, caring, honest",
+    "never_change": [
+      "Mitti"
+    ],
+    "colours": {
+      "accent": "#F9C4DC",
+      "ink": "#05050A"
+    }
+  },
+  "music": "music.mp3",
+  "music_volume": 0.3,
+  "facts": [
+    {
+      "key": "PRODUCT",
+      "label": "Product",
+      "kind": "name",
+      "display": "Mitti Glow Serum",
+      "spoken": {
+        "en": "Mitti Glow Serum",
+        "hi": "मिट्टी ग्लो सीरम",
+        "bn": "মিট্টি গ্লো সিরাম",
+        "it": "Mitti Glow Serum"
+      }
+    },
+    {
+      "key": "PRICE",
+      "label": "Price",
+      "kind": "price",
+      "display": {
+        "default": "₹699",
+        "it": "€14"
+      },
+      "spoken": {
+        "en": "six hundred and ninety-nine rupees",
+        "hi": "छह सौ निन्यानवे रुपये",
+        "bn": "ছশো নিরানব্বই টাকা",
+        "it": "quattordici euro"
+      }
+    },
+    {
+      "key": "OFFER",
+      "label": "Offer",
+      "kind": "offer",
+      "display": {
+        "en": "Free shipping",
+        "hi": "मुफ़्त डिलीवरी",
+        "bn": "ফ্রি ডেলিভারি",
+        "it": "Spedizione gratuita"
+      },
+      "spoken": {
+        "en": "free shipping",
+        "hi": "मुफ़्त डिलीवरी",
+        "bn": "ফ্রি ডেলিভারি",
+        "it": "spedizione gratuita"
+      }
+    },
+    {
+      "key": "URL",
+      "label": "Website",
+      "kind": "url",
+      "display": "mitti-skin.in"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s1",
+      "role": "hook",
+      "start": 0,
+      "end": 3.4,
+      "clip": "clip1.mp4",
+      "clip_in": 0.2,
+      "line": {
+        "voice": "Your skin had a long week too.",
+        "screen": "Skin, take a break."
+      }
+    },
+    {
+      "id": "s2",
+      "role": "product",
+      "start": 3.4,
+      "end": 7.4,
+      "clip": "clip2.mp4",
+      "clip_in": 0.2,
+      "line": {
+        "voice": "{PRODUCT}. Simple, gentle, made with things you can pronounce.",
+        "screen": "{PRODUCT}"
+      }
+    },
+    {
+      "id": "s3",
+      "role": "price",
+      "start": 7.4,
+      "end": 11.4,
+      "clip": "clip3.mp4",
+      "clip_in": 0.2,
+      "line": {
+        "voice": "{PRICE}, and {OFFER}.",
+        "screen": "{PRICE} · {OFFER}"
+      },
+      "text_band": "bottom",
+      "screen_max_words": 9
+    },
+    {
+      "id": "s4",
+      "role": "cta",
+      "start": 11.4,
+      "end": 15,
+      "clip": "clip4.mp4",
+      "clip_in": 0.2,
+      "line": {
+        "voice": "Be kind to your skin tonight.",
+        "screen": "Order at {URL}"
+      }
+    }
+  ]
+}

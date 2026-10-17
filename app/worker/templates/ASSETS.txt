@@ -1,0 +1,10 @@
+Pexels videos (Pexels License: free to use, attribution not required — https://www.pexels.com/license/)
+kettle-and-kadak: 34806353 8298067 8810918 13722700
+stride: 8995265 4941597 8457018 32240945
+mitti: 7191084 8131886 8131887 8996172
+Page: https://www.pexels.com/video/<id>/
+
+Music (Pixabay Content License: free, no attribution — https://pixabay.com/service/license-summary/), 20 s excerpts:
+kettle-and-kadak: https://pixabay.com/music/india-fusion-228214/
+stride: https://pixabay.com/music/rock-upbeat-energetic-rock-614902/
+mitti: https://pixabay.com/music/acoustic-group-morning-garden-acoustic-chill-15013/
