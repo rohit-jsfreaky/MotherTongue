@@ -42,11 +42,18 @@ class Worker:
         self.campaign_locks: dict[str, asyncio.Lock] = {}
         self.last_poll: str | None = None
         self.done = 0
+        self.running = 0
 
     # ── loop ─────────────────────────────────────────────────────────────────────────────────────────────────────
-    async def run(self) -> None:
-        print(f"worker {self.id} serving jobs", flush=True)
+    async def run(self, drain_idle: float | None = None) -> None:
+        """Serve forever, or (drain mode) until the queue has been empty and nothing is running for `drain_idle` s."""
+        print(f"worker {self.id} serving jobs{' (drain mode)' if drain_idle else ''}", flush=True)
+        idle_since: float | None = None
+        loop = asyncio.get_running_loop()
         while True:
+            if drain_idle is not None and idle_since is not None and self.running == 0                     and loop.time() - idle_since > drain_idle:
+                print(f"queue empty for {drain_idle:.0f} s — {self.done} jobs done, exiting", flush=True)
+                return
             await self.slots.acquire()
             try:
                 rows = await self.db.rpc("claim_job", {"worker": self.id})
@@ -58,8 +65,13 @@ class Worker:
             self.last_poll = datetime.now(timezone.utc).isoformat()
             if not rows:
                 self.slots.release()
+                if idle_since is None:
+                    idle_since = loop.time()
                 await asyncio.sleep(2)
                 continue
+            idle_since = None
+            self.running += 1
+            print(f"claimed {rows[0]['kind']} {rows[0]['id']}", flush=True)
             asyncio.create_task(self._run_job(rows[0]))
 
     async def _run_job(self, job: dict[str, Any]) -> None:
@@ -80,7 +92,9 @@ class Worker:
                                               "error": f"{type(exc).__name__}: {exc}"[:2000]}, id=job["id"])
                 await self._status(job, "failed", "This version couldn't be made. Try again from the review page.")
         finally:
+            self.running -= 1
             self.slots.release()
+            print(f"finished {job['kind']} {job['id']}", flush=True)
 
     async def _requeue(self, job: dict[str, Any], seconds: int, error: str) -> None:
         when = (datetime.now(timezone.utc) + timedelta(seconds=seconds)).isoformat()
@@ -231,8 +245,13 @@ class Worker:
         return {"worker": self.id, "last_poll": self.last_poll, "jobs_done": self.done}
 
 
-async def serve(settings: Settings) -> None:
+async def serve(settings: Settings, drain_idle: float | None = None) -> None:
     worker = Worker(settings)
+    if drain_idle is not None:
+        await worker.run(drain_idle)
+        await worker.tf.aclose()
+        await worker.db.aclose()
+        return
     port = int(os.environ.get("PORT", "7860"))
 
     async def http(reader: asyncio.StreamReader, writer: asyncio.StreamWriter) -> None:

@@ -3,6 +3,7 @@ import audiencesJson from "@/data/audiences.json";
 import chai from "@/data/templates/kettle-and-kadak.json";
 import mitti from "@/data/templates/mitti.json";
 import stride from "@/data/templates/stride.json";
+import { kickWorker } from "./kick";
 import { supabaseAdmin } from "./supabase/admin";
 import type { Master } from "./types";
 
@@ -80,10 +81,11 @@ export async function createCampaign(opts: {
     .single();
   if (error) throw error;
 
-  for (const a of opts.audiences) {
-    const { data: aud, error: aErr } = await db
-      .from("audiences")
-      .insert({
+  // Batched: one insert for all audiences, one for all versions, one for all jobs.
+  const { data: auds, error: aErr } = await db
+    .from("audiences")
+    .insert(
+      opts.audiences.map((a) => ({
         campaign_id: campaign.id,
         preset_id: a.id.startsWith("custom-") ? null : a.id,
         label: a.label,
@@ -92,31 +94,36 @@ export async function createCampaign(opts: {
         tone: a.tone,
         notes: a.notes,
         voice: a.voice,
-      })
-      .select()
-      .single();
-    if (aErr) throw aErr;
-    const pre = opts.usePrerendered && opts.templateId ? prerendered[opts.templateId]?.[a.id] : undefined;
-    const { data: ver, error: vErr } = await db
-      .from("versions")
-      .insert({
-        campaign_id: campaign.id,
-        audience_id: aud.id,
-        n: 1,
-        status: pre ? pre.status : "queued",
-        stage: pre ? "done" : "queued",
-        record: pre ? pre.record : {},
-        mp4_path: pre?.mp4_path ?? null,
-        srt_path: pre?.srt_path ?? null,
-        thumb_path: pre?.thumb_path ?? null,
-      })
-      .select()
-      .single();
-    if (vErr) throw vErr;
-    if (!pre) {
-      await db.from("jobs").insert({ kind: "make_version", version_id: ver.id, campaign_id: campaign.id, payload: {} });
-    }
+      })),
+    )
+    .select();
+  if (aErr || !auds) throw aErr ?? new Error("Could not save audiences");
+  const presetOf = (row: { preset_id: string | null }, i: number) => row.preset_id ?? opts.audiences[i]?.id;
+  const { data: vers, error: vErr } = await db
+    .from("versions")
+    .insert(
+      auds.map((aud, i) => {
+        const pre = opts.usePrerendered && opts.templateId ? prerendered[opts.templateId]?.[presetOf(aud, i)] : undefined;
+        return {
+          campaign_id: campaign.id,
+          audience_id: aud.id,
+          n: 1,
+          status: pre ? pre.status : "queued",
+          stage: pre ? "done" : "queued",
+          record: pre ? pre.record : {},
+          mp4_path: pre?.mp4_path ?? null,
+          srt_path: pre?.srt_path ?? null,
+          thumb_path: pre?.thumb_path ?? null,
+        };
+      }),
+    )
+    .select();
+  if (vErr || !vers) throw vErr ?? new Error("Could not save versions");
+  const queued = vers.filter((v) => v.status === "queued");
+  if (queued.length) {
+    await db.from("jobs").insert(queued.map((v) => ({ kind: "make_version", version_id: v.id, campaign_id: campaign.id, payload: {} })));
   }
+  if (queued.length) await kickWorker();
   return campaign;
 }
 

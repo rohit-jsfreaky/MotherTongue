@@ -87,7 +87,9 @@ def main() -> None:
     r.add_argument("--assets", help="folder with the template's clips and music (default: the template folder)")
     r.add_argument("--out", required=True)
     r.add_argument("--no-music", action="store_true")
-    sub.add_parser("serve", help="serve the Supabase job queue (the always-on worker)")
+    sv = sub.add_parser("serve", help="serve the Supabase job queue (the always-on worker)")
+    sv.add_argument("--drain", type=float, default=None, metavar="SECONDS",
+                    help="process the queue, then exit after it has been empty this long (CI / on-demand runs)")
     pub = sub.add_parser("publish-samples", help="upload rendered samples for the demo workspace + landing copies")
     pub.add_argument("--out", help="folder with <template>/<audience>/ renders (default: worker/out)")
     a = p.parse_args()
@@ -98,4 +100,4 @@ def main() -> None:
         main_publish(a.out)
     elif a.cmd == "serve":
         from .serve import serve
-        asyncio.run(serve(load_settings()))
+        asyncio.run(serve(load_settings(), a.drain))

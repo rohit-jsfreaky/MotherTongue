@@ -148,6 +148,55 @@ body {
   animation: shimmer-text 1.6s linear infinite;
 }
 
+
+/* ─── Ported from the studiomode landing (Techorigins, used with Rohit's permission) ─── */
+.hero-mouse-glow {
+  background-image: radial-gradient(ellipse 55% 45% at var(--mx, 50%) var(--my, 32%),
+      rgba(255, 200, 150, 0.28) 0%, rgba(200, 150, 255, 0.2) 28%, rgba(120, 100, 240, 0.1) 55%, transparent 85%);
+  will-change: background-image;
+}
+.animate-cta-slide-in { animation: cta-slide-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; animation-delay: 0.5s; }
+.animate-cta-shimmer { animation: cta-shimmer 3s ease-in-out 1.4s infinite; }
+@keyframes cta-logo-gradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+.cta-hero-interaction { --cta-ease: cubic-bezier(0.16, 1, 0.3, 1); --cta-logo-w: 42px; }
+@media (min-width: 640px) { .cta-hero-interaction { --cta-logo-w: 58px; } }
+.cta-hero-surface { transition: background 900ms var(--cta-ease), border-color 900ms var(--cta-ease), box-shadow 900ms var(--cta-ease); }
+.cta-hero-interaction.cta-hero-surface:hover {
+  background: linear-gradient(112deg, rgba(147, 86, 249, 0.16) 0%, rgba(8, 8, 10, 1) 42%, rgba(91, 65, 248, 0.12) 100%);
+}
+.cta-logo-slide { position: relative; width: 100%; height: 100%; transition: transform 900ms var(--cta-ease); will-change: transform; }
+.cta-hero-interaction:hover .cta-logo-slide { transform: translateX(calc(100% - var(--cta-logo-w))); }
+.cta-logo-pill { transition: box-shadow 900ms var(--cta-ease); }
+.cta-hero-interaction:hover .cta-logo-pill { animation: cta-logo-gradient 3.2s ease-in-out infinite; box-shadow: 0 0 24px rgba(147, 86, 249, 0.45); }
+.cta-logo-glow { position: absolute; left: 0; top: 0; bottom: 0; width: var(--cta-logo-w); opacity: 0; filter: blur(20px); transition: opacity 900ms var(--cta-ease); pointer-events: none; }
+.cta-hero-interaction:hover .cta-logo-glow { opacity: 0.45; }
+.cta-hero-text-stack { position: relative; z-index: 20; display: block; height: 1.15em; min-width: max-content; overflow: hidden; text-align: center; }
+.cta-hero-text-out, .cta-hero-text-in { transition: transform 750ms var(--cta-ease), opacity 750ms var(--cta-ease), filter 750ms var(--cta-ease); }
+.cta-hero-text-in { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; transform: translateY(115%); opacity: 0; color: #ffffff; }
+.cta-hero-interaction:hover .cta-hero-text-out { transform: translateY(-115%); opacity: 0; filter: blur(2px); }
+.cta-hero-interaction:hover .cta-hero-text-in { transform: translateY(0); opacity: 1; filter: blur(0); }
+.cta-hero-logo-icon { transition: transform 900ms var(--cta-ease); }
+.cta-hero-interaction:hover .cta-hero-logo-icon { transform: scale(1.05) rotate(4deg); }
+@keyframes skeleton-shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(200%); } }
+.animate-skeleton-shimmer { animation: skeleton-shimmer 1.5s ease-in-out infinite; }
+.animate-toolkit-scroll { animation: sm-marquee 30s linear infinite; }
+.create-drift-a { animation: drift-a 9s ease-in-out infinite; will-change: transform; }
+.create-drift-b { animation: drift-b 11s ease-in-out infinite; will-change: transform; }
+.create-drift-c { animation: drift-c 13s ease-in-out infinite; will-change: transform; }
+
+[data-reveal] { opacity: 0; transition-property: opacity, transform; transition-duration: 700ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1); will-change: opacity, transform; }
+[data-reveal="up"] { transform: translate3d(0, 28px, 0); }
+[data-reveal="down"] { transform: translate3d(0, -28px, 0); }
+[data-reveal="left"] { transform: translate3d(40px, 0, 0); }
+[data-reveal="right"] { transform: translate3d(-40px, 0, 0); }
+[data-reveal="scale"] { transform: scale(0.94); }
+[data-reveal="fade"] { transform: none; }
+[data-reveal].is-visible { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+
 /* Pause marquees while hovered, as the reference does. */
 .marquee-pause:hover > * {
   animation-play-state: paused;

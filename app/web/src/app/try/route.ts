@@ -38,7 +38,8 @@ export async function GET(request: NextRequest) {
   if (error || !ws) return NextResponse.redirect(new URL("/login?error=try", request.url));
 
   const audiences = PRESETS.filter((p) => ["kolkata-bn", "lucknow-hi", "milan-it", "global-en"].includes(p.id));
-  for (const [id, t] of Object.entries(TEMPLATES)) {
+  // The three sample campaigns are independent: create them in parallel.
+  await Promise.all(Object.entries(TEMPLATES).map(async ([id, t]) => {
     const brand = await brandForTemplate(ws.id, t);
     await createCampaign({
       workspaceId: ws.id,
@@ -50,6 +51,6 @@ export async function GET(request: NextRequest) {
       audiences,
       usePrerendered: true,
     });
-  }
+  }));
   return response;
 }

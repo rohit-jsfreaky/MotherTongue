@@ -1,0 +1,40 @@
+name: worker
+
+# The MotherTongue worker. The app wakes it the moment a job is queued (workflow_dispatch from the server);
+# the schedule is only a safety net. Each run drains the Supabase job queue and exits when it's been empty a while.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"
+
+concurrency:
+  group: worker
+  cancel-in-progress: false
+
+jobs:
+  drain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    defaults:
+      run:
+        working-directory: app/worker
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: app/worker
+      - name: FFmpeg + fonts
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends ffmpeg fontconfig >/dev/null
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: app/worker/uv.lock
+      - run: uv sync --frozen --no-dev
+      - name: Drain the job queue
+        env:
+          AMD_TOKEN_FACTORY_API_KEY: ${{ secrets.AMD_TOKEN_FACTORY_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+          FFMPEG_THREADS: "4"
+          WORKER_JOBS: "4"
+          WORKER_TMP: ${{ runner.temp }}
+        run: uv run --no-sync mothertongue-worker serve --drain 90

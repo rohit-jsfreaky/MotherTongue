@@ -1,5 +1,6 @@
 import "server-only";
 import { redirect } from "next/navigation";
+import { kickWorker } from "./kick";
 import { supabaseAdmin } from "./supabase/admin";
 import { supabaseServer } from "./supabase/server";
 
@@ -48,4 +49,5 @@ export async function enqueue(kind: string, versionId: string, campaignId: strin
     .from("jobs")
     .insert({ kind, version_id: versionId, campaign_id: campaignId, payload });
   if (error) throw error;
+  await kickWorker();
 }
