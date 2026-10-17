@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "@/components/brand/Logo";
 import { signOut } from "@/app/app/actions";
+import { startTopLoader } from "@/components/site/TopLoader";
 
 const NAV = [
   { href: "/app", label: "Campaigns", icon: MegaphoneSimple, exact: true },
@@ -54,7 +55,7 @@ export function Sidebar({ email, isDemo }: { email: string | null; isDemo: boole
             {(email ?? "S").slice(0, 1).toUpperCase()}
           </span>
           <span className="min-w-0 flex-1 truncate text-[13px] text-fg-2">{email ?? "Guest (sample)"}</span>
-          <form action={signOut}>
+          <form action={signOut} onSubmit={() => startTopLoader()}>
             <button aria-label="Sign out" className="grid size-8 place-items-center rounded-[8px] text-fg-3 hover:bg-soft hover:text-fg">
               <SignOut className="size-4" />
             </button>

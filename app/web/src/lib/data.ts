@@ -1,21 +1,29 @@
 import "server-only";
 import { redirect } from "next/navigation";
+import { cache } from "react";
 import { kickWorker } from "./kick";
 import { supabaseAdmin } from "./supabase/admin";
 import { supabaseServer } from "./supabase/server";
 
-/** The signed-in user (anonymous demo users included) or a redirect to login. */
-export async function requireUser() {
+/**
+ * The signed-in user (anonymous demo users included) or a redirect to login. The session token is verified locally
+ * against the project's public signing key (getClaims), so no page waits on a round trip to the auth server.
+ */
+export const requireUser = cache(async () => {
   const supabase = await supabaseServer();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) redirect("/login");
+  const { data } = await supabase.auth.getClaims();
+  const claims = data?.claims;
+  if (!claims?.sub) redirect("/login");
+  const user = {
+    id: claims.sub,
+    email: typeof claims.email === "string" && claims.email ? claims.email : null,
+    is_anonymous: claims.is_anonymous === true,
+  };
   return { supabase, user };
-}
+});
 
-/** The user's workspace (one per user in this build). Created on first visit after sign-up. */
-export async function getWorkspace() {
+/** The user's workspace (one per user in this build). Created on first visit after sign-up. Layout and page share it. */
+export const getWorkspace = cache(async () => {
   const { supabase, user } = await requireUser();
   const { data } = await supabase.from("workspaces").select("*").order("created_at").limit(1);
   let ws = data?.[0];
@@ -29,7 +37,7 @@ export async function getWorkspace() {
     ws = created;
   }
   return { supabase, user, workspace: ws as { id: string; name: string; is_demo: boolean; owner_id: string } };
-}
+});
 
 /** Short-lived links to private media. Only called after RLS has confirmed the row belongs to the user. */
 export async function signedUrls(paths: (string | null | undefined)[], seconds = 3600) {

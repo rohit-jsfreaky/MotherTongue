@@ -4,6 +4,7 @@ import { ArrowRight, CircleNotch } from "@phosphor-icons/react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
+import { startTopLoader } from "@/components/site/TopLoader";
 import { Button } from "@/components/ui/Button";
 import { supabaseBrowser } from "@/lib/supabase/client";
 
@@ -37,6 +38,7 @@ export function AuthForm({ mode }: { mode: "login" | "signup" }) {
       setBusy(false);
       return;
     }
+    startTopLoader();
     router.push(params.get("next") || "/app");
     router.refresh();
   }

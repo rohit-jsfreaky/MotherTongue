@@ -14,10 +14,9 @@ export async function proxy(request: NextRequest) {
       },
     },
   });
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user && request.nextUrl.pathname.startsWith("/app")) {
+  // verified locally against the project's signing key; refreshes an expired session (no auth-server round trip)
+  const { data } = await supabase.auth.getClaims();
+  if (!data?.claims?.sub && request.nextUrl.pathname.startsWith("/app")) {
     const url = request.nextUrl.clone();
     url.pathname = "/login";
     url.searchParams.set("next", request.nextUrl.pathname);

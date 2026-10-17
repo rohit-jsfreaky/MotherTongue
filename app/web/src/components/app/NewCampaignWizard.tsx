@@ -3,6 +3,7 @@
 import { ArrowLeft, ArrowRight, CheckCircle, CircleNotch, FilmStrip, Info, Lock, MusicNotes, Plus, Trash, UploadSimple } from "@phosphor-icons/react";
 import { useMemo, useState, useTransition } from "react";
 import { createFromTemplate, createFromUpload, uploadTicket } from "@/app/app/actions";
+import { startTopLoader, stopTopLoader } from "@/components/site/TopLoader";
 import { supabaseBrowser } from "@/lib/supabase/client";
 import { LANGUAGE_NAMES, type Fact } from "@/lib/types";
 
@@ -100,6 +101,7 @@ export function NewCampaignWizard({ templates, presets }: { templates: TemplateC
 
   function submit() {
     setError("");
+    startTopLoader();
     start(async () => {
       try {
         if (source === "template" && template) {
@@ -134,6 +136,7 @@ export function NewCampaignWizard({ templates, presets }: { templates: TemplateC
       } catch (e) {
         const msg = e instanceof Error ? e.message : String(e);
         if (msg.includes("NEXT_REDIRECT")) throw e;
+        stopTopLoader();
         setError(msg);
       }
     });

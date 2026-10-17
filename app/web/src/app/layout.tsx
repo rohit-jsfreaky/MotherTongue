@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Noto_Sans_Bengali, Noto_Sans_Devanagari, Space_Grotesk } from "next/font/google";
 import localFont from "next/font/local";
+import { Suspense } from "react";
+import { TopLoader } from "@/components/site/TopLoader";
 import "./globals.css";
 
 const general = localFont({
@@ -32,7 +34,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${general.variable} ${space.variable} ${jetbrains.variable} ${notoBn.variable} ${notoDv.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Suspense fallback={null}>
+          <TopLoader />
+        </Suspense>
+        {children}
+      </body>
     </html>
   );
 }

@@ -19,6 +19,7 @@ import {
 import Link from "next/link";
 import { useState, useTransition } from "react";
 import { applyFactChange, approve, editLine, requestChanges } from "@/app/app/actions";
+import { startTopLoader, stopTopLoader } from "@/components/site/TopLoader";
 import type { AudienceRow, Master, RuleRow, VersionRow } from "@/lib/types";
 
 const CHIPS = ["Too formal", "Too long", "Sounds translated", "Wrong slang", "Keep brand name in English", "More energy", "Calmer"];
@@ -50,17 +51,21 @@ export function ReviewPanel(p: Props) {
   const issues = rec.issues ?? [];
   const blocking = issues.filter((i) => i.blocking);
   const myRequest = p.feedback.find((f) => f.version_id === v.parent_id && (f.kind === "request" || f.kind === "edit"));
-  const run = (fn: () => Promise<unknown>) =>
+  // `navigates`: the action redirects to the new version's page, so the top bar runs until it opens
+  const run = (fn: () => Promise<unknown>, navigates = false) => {
+    if (navigates) startTopLoader();
     start(async () => {
       setError("");
       try {
         await fn();
       } catch (e) {
         const msg = e instanceof Error ? e.message : String(e);
-        if (!msg.includes("NEXT_REDIRECT")) setError(msg);
-        else throw e;
+        if (msg.includes("NEXT_REDIRECT")) throw e;
+        if (navigates) stopTopLoader();
+        setError(msg);
       }
     });
+  };
   const masterText = (t: string) =>
     t.replace(/\{(\w+)\}/g, (m, k) => {
       const d = p.master.facts.find((f) => f.key === k)?.display;
@@ -172,7 +177,7 @@ export function ReviewPanel(p: Props) {
             {fr.why && <p className="mt-1 text-fg-2">{fr.why}</p>}
             <button
               disabled={pending}
-              onClick={() => run(() => applyFactChange(v.id, fr.key, fr.form, fr.suggested))}
+              onClick={() => run(() => applyFactChange(v.id, fr.key, fr.form, fr.suggested), true)}
               className="mt-3 inline-flex h-9 items-center gap-1.5 rounded-[11px] bg-ink px-3 text-[13px] font-semibold text-white"
             >
               Apply and make a new version <ArrowRight className="size-3.5" />
@@ -238,7 +243,7 @@ export function ReviewPanel(p: Props) {
                           <div className="mt-2 flex gap-2">
                             <button
                               disabled={pending}
-                              onClick={() => run(() => editLine(v.id, ln.scene, "voice", draft))}
+                              onClick={() => run(() => editLine(v.id, ln.scene, "voice", draft), true)}
                               className="h-8 rounded-[10px] bg-ink px-3 text-[12.5px] font-semibold text-white"
                             >
                               Save and re-voice
@@ -398,7 +403,7 @@ export function ReviewPanel(p: Props) {
             <div className="mt-4 flex flex-wrap items-center gap-2">
               <button
                 disabled={pending || (!request.trim() && !chips.length)}
-                onClick={() => run(() => requestChanges(v.id, request, chips))}
+                onClick={() => run(() => requestChanges(v.id, request, chips), true)}
                 className="inline-flex h-10 items-center gap-2 rounded-[12px] bg-violet px-4 text-[14px] font-semibold text-white shadow-cta disabled:opacity-50"
               >
                 {pending ? <CircleNotch className="size-4 animate-spin" /> : <Sparkle weight="fill" className="size-4" />} Make v{p.history.length + 1}
