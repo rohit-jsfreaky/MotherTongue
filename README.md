@@ -66,7 +66,9 @@ Every number here has a result file in `evidence/` and a script that reproduces 
 
 ## Honest limits
 - No speech-to-text on Token Factory today → uploads need their voiceover script pasted, and the facts check runs on the
-  script that is voiced (plus vision on the finished frames), not on the audio itself.
+  script that is voiced (plus vision on the finished frames), not on the audio itself. Re-tested the evening of 17 Oct:
+  MiMo still rejects audio input, and `/v1/audio/transcriptions` now answers but has no model behind it
+  (`evidence/stt-retest-2026-10-17.json`). The day a transcription model appears, listen-back is one more check.
 - Uploaded videos: the original voice is replaced by the new voice over the uploader's music track; burned-in text stays.
 - Languages offered are the four whose voices we tested: Bengali, Hindi, Italian, English.
 - Sample brands (Kettle & Kadak, Stride, Mitti) are fictional; footage is from Pexels and music from Pixabay (free

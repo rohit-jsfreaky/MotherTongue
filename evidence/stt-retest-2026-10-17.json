@@ -1,0 +1,212 @@
+{
+ "what": "Speech-to-text re-test on AMD Token Factory",
+ "at": "2026-10-17T12:46:13.470190+00:00",
+ "reference_text": "MotherTongue fixes that. Upload one ad, pick who it's for, and lock your price and offer.",
+ "attempts": [
+  {
+   "model": "MiMo-V2.6-Flash",
+   "shape": "manual: input_audio {data, format: wav}",
+   "status": 400,
+   "error": "{\"message\": \"Invalid JSON data: Failed to deserialize the JSON body into the target type: messages[0]: data did not match any variant of untagged enum MessageContent at line 1 column 340765\", \"type\": \"invalid_request_error\", \"code\": \"json_parse_error\"}"
+  },
+  {
+   "model": "MiMo-V2.6-Flash",
+   "shape": "input_audio with a data URL",
+   "status": 400,
+   "error": "{\"message\": \"Invalid JSON data: Failed to deserialize the JSON body into the target type: messages[0]: data did not match any variant of untagged enum MessageContent at line 1 column 340787\", \"type\": \"invalid_request_error\", \"code\": \"json_parse_error\"}"
+  },
+  {
+   "model": "MiMo-V2.6-Flash",
+   "shape": "audio_url data URL",
+   "status": 400,
+   "error": "{\"issues\": [{\"code\": \"invalid_union\", \"unionErrors\": [{\"issues\": [{\"code\": \"invalid_type\", \"expected\": \"string\", \"received\": \"array\", \"path\": [\"messages\", 0, \"content\"], \"message\": \"Expected string, received array\"}], \"name\": \"ZodError\"}, {\"issues\": [{\"code\": \"invalid_union\", \"unionErrors\": [{\"issue"
+  },
+  {
+   "endpoint": "/audio/transcriptions",
+   "status": 400,
+   "body": "{\"error\":{\"message\":\"Transcription model not found: whisper-1\",\"type\":\"invalid_request_error\",\"param\":\"model\",\"code\":\"model_not_found\"}}"
+  },
+  {
+   "endpoint": "/audio/translations",
+   "status": 415,
+   "body": "{\"error\":{\"message\":\"Unsupported Media Type: Content-Type must be application/json\",\"type\":\"invalid_request_error\",\"param\":null,\"code\":\"unsupported_media_type\"}}"
+  }
+ ],
+ "catalogue": [
+  {
+   "id": "Clef",
+   "mentions_audio": false,
+   "input_modalities": [
+    "text",
+    "image"
+   ]
+  },
+  {
+   "id": "d3",
+   "mentions_audio": false,
+   "input_modalities": [
+    "text",
+    "image"
+   ]
+  },
+  {
+   "id": "d3-flash",
+   "mentions_audio": false,
+   "input_modalities": [
+    "text",
+    "image"
+   ]
+  },
+  {
+   "id": "DeepSeek-V4.1-Flash",
+   "mentions_audio": false,
+   "input_modalities": [
+    "text",
+    "image"
+   ]
+  },
+  {
+   "id": "DeepSeek-V4-Flash",
+   "mentions_audio": false,
+   "input_modalities": [
+    "text"
+   ]
+  },
+  {
+   "id": "DeepSeek-V4-Flash-Vision-Exp",
+   "mentions_audio": false,
+   "input_modalities": [
+    "text",
+    "image"
+   ]
+  },
+  {
+   "id": "Gemma-4-31B-IT",
+   "mentions_audio": false,
+   "input_modalities": [
+    "text",
+    "image"
+   ]
+  },
+  {
+   "id": "GLM-5.3-Flash",
+   "mentions_audio": false,
+   "input_modalities": [
+    "text"
+   ]
+  },
+  {
+   "id": "MiMo-V2.6-Flash",
+   "mentions_audio": false,
+   "input_modalities": [
+    "text",
+    "image"
+   ]
+  },
+  {
+   "id": "MinerU2.5-Pro",
+   "mentions_audio": false,
+   "input_modalities": [
+    "text"
+   ]
+  },
+  {
+   "id": "MiniCPM5-2B",
+   "mentions_audio": false,
+   "input_modalities": [
+    "text"
+   ]
+  },
+  {
+   "id": "MiniCPM-V-4.7-1B",
+   "mentions_audio": false,
+   "input_modalities": [
+    "text",
+    "image"
+   ]
+  },
+  {
+   "id": "MiniCPM-V-4.7-35B-A3B",
+   "mentions_audio": false,
+   "input_modalities": [
+    "text",
+    "image"
+   ]
+  },
+  {
+   "id": "OmniVoice",
+   "mentions_audio": true,
+   "input_modalities": [
+    "text"
+   ]
+  },
+  {
+   "id": "Qwen3.8-27B",
+   "mentions_audio": false,
+   "input_modalities": [
+    "text",
+    "image"
+   ]
+  },
+  {
+   "id": "Qwen3.8-Flash-Next",
+   "mentions_audio": false,
+   "input_modalities": [
+    "text",
+    "image"
+   ]
+  }
+ ],
+ "models_tried": [
+  "MiMo-V2.6-Flash"
+ ],
+ "clip": "OmniVoice returned 500 now; used n2.wav, made by OmniVoice earlier today",
+ "clip_bytes": 255404,
+ "verdict": "speech-to-text still NOT available (re-tested 17 Oct 2026 evening): MiMo-V2.6-Flash rejects audio in the manual's input_audio shape and two variants (400, same error as this morning); no catalogue model lists audio input. New since the morning: /v1/audio/transcriptions now answers (it was a 404) but has no model behind it - every name tried returns 'Transcription model not found'. So listen-back and auto-transcribing uploads stay out; the README limit stands.",
+ "transcription_probes": [
+  {
+   "model": "whisper-large-v3",
+   "status": 400,
+   "body": "{\"error\":{\"message\":\"Transcription model not found: whisper-large-v3\",\"type\":\"invalid_request_error\",\"param\":\"model\",\"code\":\"model_not_found\"}}"
+  },
+  {
+   "model": "whisper-large-v3-turbo",
+   "status": 400,
+   "body": "{\"error\":{\"message\":\"Transcription model not found: whisper-large-v3-turbo\",\"type\":\"invalid_request_error\",\"param\":\"model\",\"code\":\"model_not_found\"}}"
+  },
+  {
+   "model": "MiMo-V2.6-Flash",
+   "status": 400,
+   "body": "{\"error\":{\"message\":\"Transcription model not found: MiMo-V2.6-Flash\",\"type\":\"invalid_request_error\",\"param\":\"model\",\"code\":\"model_not_found\"}}"
+  },
+  {
+   "model": "OmniVoice",
+   "status": 400,
+   "body": "{\"error\":{\"message\":\"Transcription model not found: OmniVoice\",\"type\":\"invalid_request_error\",\"param\":\"model\",\"code\":\"model_not_found\"}}"
+  },
+  {
+   "model": "Qwen3-ASR",
+   "status": 400,
+   "body": "{\"error\":{\"message\":\"Transcription model not found: Qwen3-ASR\",\"type\":\"invalid_request_error\",\"param\":\"model\",\"code\":\"model_not_found\"}}"
+  },
+  {
+   "model": "SenseVoiceSmall",
+   "status": 400,
+   "body": "{\"error\":{\"message\":\"Transcription model not found: SenseVoiceSmall\",\"type\":\"invalid_request_error\",\"param\":\"model\",\"code\":\"model_not_found\"}}"
+  },
+  {
+   "model": "MiMo-Audio",
+   "status": 400,
+   "body": "{\"error\":{\"message\":\"Transcription model not found: MiMo-Audio\",\"type\":\"invalid_request_error\",\"param\":\"model\",\"code\":\"model_not_found\"}}"
+  }
+ ],
+ "omnivoice_retry": {
+  "status": 500,
+  "bytes": null,
+  "body": "{\"error\":{\"message\":\"Generation failed\",\"type\":\"server_error\",\"param\":null,\"code\":\"generation_failed\"}}"
+ },
+ "omnivoice_retry_2": {
+  "status": 200
+ },
+ "omnivoice_note": "OmniVoice answered 500 'Generation failed' for the instruction 'male, adult' (not used by the product) and 200 for 'female, young adult' and 'male, young adult' (the product's presets)."
+}
