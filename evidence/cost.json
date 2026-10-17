@@ -1,0 +1,348 @@
+{
+ "what": "Per-version cost and time for real MotherTongue versions made on AMD Token Factory (Gemma-4-31B-IT + OmniVoice), 15-second ads, 4 scenes, 720x1280.",
+ "generated_at": "2026-10-17T10:22:25.447587+00:00",
+ "versions": 12,
+ "status_counts": {
+  "needs_look": 1,
+  "ready": 11
+ },
+ "per_version": {
+  "model_calls": {
+   "mean": 9.83,
+   "median": 10.0,
+   "min": 8,
+   "max": 12
+  },
+  "gemma_calls": {
+   "mean": 3.17,
+   "median": 3.0,
+   "min": 3,
+   "max": 4
+  },
+  "omnivoice_calls": {
+   "mean": 6.67,
+   "median": 7.0,
+   "min": 5,
+   "max": 8
+  },
+  "prompt_tokens": {
+   "mean": 3822.25,
+   "median": 3740.5,
+   "min": 3629,
+   "max": 4123
+  },
+  "completion_tokens": {
+   "mean": 629.58,
+   "median": 633.5,
+   "min": 566,
+   "max": 721
+  },
+  "seconds_total": {
+   "mean": 137.8,
+   "median": 140.55,
+   "min": 101.4,
+   "max": 187.9
+  },
+  "seconds_by_stage_mean": {
+   "factcheck": 14.3,
+   "picture": 26.0,
+   "render": 3.2,
+   "voice": 69.2,
+   "write": 25.1
+  },
+  "nominal_usd": {
+   "gemma_usd": 0.0001633,
+   "omnivoice_usd": 1.16e-05,
+   "total_usd": 0.0001749,
+   "how": "rates from token_factory_usage_snapshot (cost / tokens for Gemma, cost / requests for OmniVoice) times the per-version means above; nominal, the service is free for the event"
+  }
+ },
+ "notes": [
+  "seconds are wall time per version measured by the worker; versions ran 4 at a time sharing one rate limit (20 requests/min per account), so the voice stage includes waiting for the limiter.",
+  "One extra Gemma 'see' call per campaign (shared by all its versions) is not included per version.",
+  "Token Factory is free for the event; its usage endpoint reports a nominal USD figure, recorded below."
+ ],
+ "token_factory_usage_snapshot": {
+  "daily_cost_limit_usd": 1,
+  "daily_cost_used_usd": 0.007644442841410637,
+  "rpm_limit": 20,
+  "by_model": [
+   {
+    "model": "OmniVoice",
+    "requests": 219,
+    "errors": 13,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "cost": 0.0003810452180914581
+   },
+   {
+    "model": "Gemma-4-31B-IT",
+    "requests": 128,
+    "errors": 0,
+    "prompt_tokens": 153292,
+    "completion_tokens": 36384,
+    "cost": 0.0069573610089719296
+   },
+   {
+    "model": "MiMo-V2.6-Flash",
+    "requests": 5,
+    "errors": 5,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "cost": 0
+   },
+   {
+    "model": "Qwen3.8-Flash-Next",
+    "requests": 1,
+    "errors": 0,
+    "prompt_tokens": 986,
+    "completion_tokens": 300,
+    "cost": 0.00030603999039158225
+   }
+  ]
+ },
+ "rows": [
+  {
+   "template": "kettle-and-kadak",
+   "audience": "global-en",
+   "status": "ready",
+   "model_calls": 12,
+   "gemma_calls": 4,
+   "omnivoice_calls": 8,
+   "retried_or_failed_calls": 0,
+   "prompt_tokens": 4123,
+   "completion_tokens": 630,
+   "seconds_total": 186.9,
+   "seconds_by_stage": {
+    "write": 42.7,
+    "voice": 80.2,
+    "factcheck": 1.2,
+    "render": 2.5,
+    "picture": 60.3
+   },
+   "issues": []
+  },
+  {
+   "template": "kettle-and-kadak",
+   "audience": "kolkata-bn",
+   "status": "ready",
+   "model_calls": 11,
+   "gemma_calls": 3,
+   "omnivoice_calls": 8,
+   "retried_or_failed_calls": 0,
+   "prompt_tokens": 4013,
+   "completion_tokens": 627,
+   "seconds_total": 155.3,
+   "seconds_by_stage": {
+    "write": 44.2,
+    "voice": 73.7,
+    "factcheck": 3.1,
+    "render": 2.5,
+    "picture": 31.8
+   },
+   "issues": []
+  },
+  {
+   "template": "kettle-and-kadak",
+   "audience": "lucknow-hi",
+   "status": "ready",
+   "model_calls": 10,
+   "gemma_calls": 3,
+   "omnivoice_calls": 7,
+   "retried_or_failed_calls": 0,
+   "prompt_tokens": 3999,
+   "completion_tokens": 673,
+   "seconds_total": 187.9,
+   "seconds_by_stage": {
+    "write": 48.2,
+    "voice": 79.3,
+    "factcheck": 38.0,
+    "render": 2.3,
+    "picture": 20.1
+   },
+   "issues": []
+  },
+  {
+   "template": "kettle-and-kadak",
+   "audience": "milan-it",
+   "status": "ready",
+   "model_calls": 10,
+   "gemma_calls": 3,
+   "omnivoice_calls": 7,
+   "retried_or_failed_calls": 0,
+   "prompt_tokens": 4016,
+   "completion_tokens": 584,
+   "seconds_total": 144.8,
+   "seconds_by_stage": {
+    "write": 41.3,
+    "voice": 25.1,
+    "factcheck": 49.8,
+    "render": 2.5,
+    "picture": 26.1
+   },
+   "issues": []
+  },
+  {
+   "template": "mitti",
+   "audience": "global-en",
+   "status": "ready",
+   "model_calls": 10,
+   "gemma_calls": 3,
+   "omnivoice_calls": 7,
+   "retried_or_failed_calls": 0,
+   "prompt_tokens": 3629,
+   "completion_tokens": 570,
+   "seconds_total": 101.9,
+   "seconds_by_stage": {
+    "write": 11.8,
+    "voice": 69.1,
+    "factcheck": 1.5,
+    "render": 2.0,
+    "picture": 17.5
+   },
+   "issues": []
+  },
+  {
+   "template": "mitti",
+   "audience": "kolkata-bn",
+   "status": "ready",
+   "model_calls": 8,
+   "gemma_calls": 3,
+   "omnivoice_calls": 5,
+   "retried_or_failed_calls": 0,
+   "prompt_tokens": 3709,
+   "completion_tokens": 664,
+   "seconds_total": 101.4,
+   "seconds_by_stage": {
+    "write": 14.8,
+    "voice": 53.6,
+    "factcheck": 11.6,
+    "render": 2.0,
+    "picture": 19.4
+   },
+   "issues": []
+  },
+  {
+   "template": "mitti",
+   "audience": "lucknow-hi",
+   "status": "needs_look",
+   "model_calls": 8,
+   "gemma_calls": 3,
+   "omnivoice_calls": 5,
+   "retried_or_failed_calls": 0,
+   "prompt_tokens": 3695,
+   "completion_tokens": 721,
+   "seconds_total": 103.4,
+   "seconds_by_stage": {
+    "write": 16.7,
+    "voice": 60.9,
+    "factcheck": 5.9,
+    "render": 2.8,
+    "picture": 17.1
+   },
+   "issues": [
+    "fact_mismatch"
+   ]
+  },
+  {
+   "template": "mitti",
+   "audience": "milan-it",
+   "status": "ready",
+   "model_calls": 9,
+   "gemma_calls": 3,
+   "omnivoice_calls": 6,
+   "retried_or_failed_calls": 0,
+   "prompt_tokens": 3653,
+   "completion_tokens": 642,
+   "seconds_total": 110.0,
+   "seconds_by_stage": {
+    "write": 14.2,
+    "voice": 80.3,
+    "factcheck": 1.7,
+    "render": 2.0,
+    "picture": 11.8
+   },
+   "issues": []
+  },
+  {
+   "template": "stride",
+   "audience": "global-en",
+   "status": "ready",
+   "model_calls": 12,
+   "gemma_calls": 4,
+   "omnivoice_calls": 8,
+   "retried_or_failed_calls": 0,
+   "prompt_tokens": 3851,
+   "completion_tokens": 601,
+   "seconds_total": 137.8,
+   "seconds_by_stage": {
+    "write": 15.8,
+    "voice": 78.1,
+    "factcheck": 3.7,
+    "render": 3.4,
+    "picture": 36.8
+   },
+   "issues": []
+  },
+  {
+   "template": "stride",
+   "audience": "kolkata-bn",
+   "status": "ready",
+   "model_calls": 10,
+   "gemma_calls": 3,
+   "omnivoice_calls": 7,
+   "retried_or_failed_calls": 0,
+   "prompt_tokens": 3740,
+   "completion_tokens": 640,
+   "seconds_total": 142.9,
+   "seconds_by_stage": {
+    "write": 18.9,
+    "voice": 74.2,
+    "factcheck": 19.1,
+    "render": 8.7,
+    "picture": 22.0
+   },
+   "issues": []
+  },
+  {
+   "template": "stride",
+   "audience": "lucknow-hi",
+   "status": "ready",
+   "model_calls": 9,
+   "gemma_calls": 3,
+   "omnivoice_calls": 6,
+   "retried_or_failed_calls": 0,
+   "prompt_tokens": 3741,
+   "completion_tokens": 637,
+   "seconds_total": 138.2,
+   "seconds_by_stage": {
+    "write": 17.5,
+    "voice": 83.3,
+    "factcheck": 11.4,
+    "render": 2.7,
+    "picture": 23.3
+   },
+   "issues": []
+  },
+  {
+   "template": "stride",
+   "audience": "milan-it",
+   "status": "ready",
+   "model_calls": 9,
+   "gemma_calls": 3,
+   "omnivoice_calls": 6,
+   "retried_or_failed_calls": 0,
+   "prompt_tokens": 3698,
+   "completion_tokens": 566,
+   "seconds_total": 143.1,
+   "seconds_by_stage": {
+    "write": 14.7,
+    "voice": 73.2,
+    "factcheck": 24.2,
+    "render": 5.6,
+    "picture": 25.4
+   },
+   "issues": []
+  }
+ ]
+}

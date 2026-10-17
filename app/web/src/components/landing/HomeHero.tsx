@@ -206,7 +206,7 @@ export function HeroSection({ after }: { after: React.ReactNode }) {
       <HeroMouseGlow />
 
       {/* Top-right: the Milan version in a selection frame */}
-      <Reveal direction="left" delay={400} className="absolute top-20 right-4 lg:right-8 xl:right-16 hidden md:block z-20">
+      <Reveal direction="left" delay={400} className="absolute top-20 right-4 lg:right-6 2xl:right-16 hidden md:block z-20">
         <div className="animate-float relative">
           <span className="absolute -left-[118px] top-1 z-10 rounded-full bg-white px-3.5 py-2 text-[13px] font-medium text-black shadow-[0_6px_18px_rgba(0,0,0,0.18)]">
             Milan version
@@ -215,7 +215,7 @@ export function HeroSection({ after }: { after: React.ReactNode }) {
             {["-left-1.5 -top-1.5", "-right-1.5 -top-1.5", "-left-1.5 -bottom-1.5", "-right-1.5 -bottom-1.5"].map((p) => (
               <span key={p} className={`absolute ${p} size-3 rounded-full bg-white`} />
             ))}
-            <Clip id="stride-it" className="w-[120px] lg:w-[140px] xl:w-[150px] aspect-[9/16] rounded-[14px] object-cover drop-shadow-2xl" />
+            <Clip id="stride-it" className="w-[96px] xl:w-[112px] 2xl:w-[150px] aspect-[9/16] rounded-[14px] object-cover drop-shadow-2xl" />
           </div>
         </div>
       </Reveal>
@@ -223,11 +223,11 @@ export function HeroSection({ after }: { after: React.ReactNode }) {
         <img src="/brand/squiggle.svg" alt="" style={{ width: "70px", height: "50px", transform: "rotate(-219.5deg)" }} />
       </Reveal>
 
-      {/* Right: same price, every version */}
+      {/* Right: the brand's own price, every version */}
       <Reveal direction="left" delay={700} className="absolute hidden lg:block z-20" style={{ top: "440px", right: "-60px" }}>
         <div className="animate-float relative" style={{ animationDelay: "0.8s" }}>
           <div className="w-[270px] xl:w-[300px] rounded-[32px] p-5 backdrop-blur-sm" style={{ background: "rgba(255, 255, 255, 0.2)" }}>
-            <p className="text-white text-xs font-medium mb-3 px-1">Same price, every version</p>
+            <p className="text-white text-xs font-medium mb-3 px-1">Your price, every version</p>
             <div className="w-full h-px bg-white/30 mb-4" />
             <div className="flex gap-3">
               <Clip id="chai-hi" className="w-[101px] xl:w-[112px] h-[144px] xl:h-[158px] rounded-[18px] object-cover" />
@@ -288,9 +288,9 @@ export function HeroSection({ after }: { after: React.ReactNode }) {
           direction="up"
           delay={50}
           className="font-sans text-white font-medium leading-[1.04] tracking-[-0.035em] mb-4 sm:mb-6 max-w-[1240px]"
-          style={{ fontSize: "clamp(30px, 7.4vw, 104px)" }}
+          style={{ fontSize: "clamp(30px, 6.6vw, 104px)" }}
         >
-          <span className="block lg:whitespace-nowrap">One ad. Every audience,</span>
+          <span className="block 2xl:whitespace-nowrap">One ad. Every audience,</span>
           <span className="block">in their own words</span>
         </Reveal>
         <Reveal as="p" direction="up" delay={200} className="text-white/85 text-sm sm:text-lg lg:text-lg font-normal leading-relaxed mb-7 sm:mb-10 px-2">

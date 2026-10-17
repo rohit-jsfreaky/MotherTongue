@@ -1,0 +1,328 @@
+{
+ "what": "Planted wrong facts in real Kettle & Kadak versions (bn, hi, it, en); same checks the product runs before approval.",
+ "generated_at": "2026-10-17T10:24:51.160597+00:00",
+ "planted_total": 16,
+ "planted_caught": 16,
+ "controls_total": 4,
+ "controls_false_alarms": 0,
+ "by_kind": {
+  "wrong_price_in_digits": {
+   "planted": 4,
+   "caught": 4,
+   "by_code": 4,
+   "by_gemma": 4
+  },
+  "extra_discount_in_words": {
+   "planted": 4,
+   "caught": 4,
+   "by_code": 0,
+   "by_gemma": 4
+  },
+  "wrong_date_in_words": {
+   "planted": 4,
+   "caught": 4,
+   "by_code": 4,
+   "by_gemma": 4
+  },
+  "invented_claim_in_words": {
+   "planted": 4,
+   "caught": 4,
+   "by_code": 0,
+   "by_gemma": 4
+  }
+ },
+ "results": [
+  {
+   "language": "en",
+   "case": "control_unchanged",
+   "planted": false,
+   "caught_by_code": false,
+   "caught_by_gemma": false,
+   "flagged": false,
+   "correct": true,
+   "code_issues": [],
+   "gemma_issues": [],
+   "planted_line": null
+  },
+  {
+   "language": "en",
+   "case": "wrong_price_in_digits",
+   "planted": true,
+   "caught_by_code": true,
+   "caught_by_gemma": true,
+   "flagged": true,
+   "correct": true,
+   "code_issues": [
+    "Price is missing",
+    "the line contains a number, price or link that isn't a locked fact"
+   ],
+   "gemma_issues": [
+    "\"₹129 per box\": The price is listed as ₹129 in the voiceover, but the locked facts state it should be ₹149."
+   ],
+   "planted_line": "₹129 per box. buy two, get one free."
+  },
+  {
+   "language": "en",
+   "case": "extra_discount_in_words",
+   "planted": true,
+   "caught_by_code": false,
+   "caught_by_gemma": true,
+   "flagged": true,
+   "correct": true,
+   "code_issues": [],
+   "gemma_issues": [
+    "\"Now at half price!\": The 'half price' claim is not mentioned in the locked facts or the master ad."
+   ],
+   "planted_line": "one hundred and forty-nine rupees per box. buy two, get one free. Now at half price!"
+  },
+  {
+   "language": "en",
+   "case": "wrong_date_in_words",
+   "planted": true,
+   "caught_by_code": true,
+   "caught_by_gemma": true,
+   "flagged": true,
+   "correct": true,
+   "code_issues": [
+    "Offer ends is missing"
+   ],
+   "gemma_issues": [
+    "\"November thirtieth\": The locked facts state the offer ends on 31 October."
+   ],
+   "planted_line": "Offer ends November thirtieth. Grab yours today."
+  },
+  {
+   "language": "en",
+   "case": "invented_claim_in_words",
+   "planted": true,
+   "caught_by_code": false,
+   "caught_by_gemma": true,
+   "flagged": true,
+   "correct": true,
+   "code_issues": [],
+   "gemma_issues": [
+    "\"Recommended by doctors.\": This is a product claim that is not present in the locked facts or the master ad."
+   ],
+   "planted_line": "Kettle and Kadak. Real ginger, real cardamom, that homemade taste. Recommended by doctors."
+  },
+  {
+   "language": "bn",
+   "case": "control_unchanged",
+   "planted": false,
+   "caught_by_code": false,
+   "caught_by_gemma": false,
+   "flagged": false,
+   "correct": true,
+   "code_issues": [],
+   "gemma_issues": [],
+   "planted_line": null
+  },
+  {
+   "language": "bn",
+   "case": "wrong_price_in_digits",
+   "planted": true,
+   "caught_by_code": true,
+   "caught_by_gemma": true,
+   "flagged": true,
+   "correct": true,
+   "code_issues": [
+    "Price is missing",
+    "the line contains a number, price or link that isn't a locked fact"
+   ],
+   "gemma_issues": [
+    "\"বক্স মাত্র ₹129\": The spoken price is ₹129, but the locked facts state the price is ₹149."
+   ],
+   "planted_line": "বক্স মাত্র ₹129। সাথে আছে দুটো কিনলে একটা ফ্রি।"
+  },
+  {
+   "language": "bn",
+   "case": "extra_discount_in_words",
+   "planted": true,
+   "caught_by_code": false,
+   "caught_by_gemma": true,
+   "flagged": true,
+   "correct": true,
+   "code_issues": [],
+   "gemma_issues": [
+    "\"এখন অর্ধেক দামে!\": The claim 'now at half price' is not mentioned in the locked facts or the master ad; only the 'Buy 2 Get 1 Free' offer is authorized."
+   ],
+   "planted_line": "বক্স মাত্র একশো ঊনপঞ্চাশ টাকা। সাথে আছে দুটো কিনলে একটা ফ্রি। এখন অর্ধেক দামে!"
+  },
+  {
+   "language": "bn",
+   "case": "wrong_date_in_words",
+   "planted": true,
+   "caught_by_code": true,
+   "caught_by_gemma": true,
+   "flagged": true,
+   "correct": true,
+   "code_issues": [
+    "Offer ends is missing"
+   ],
+   "gemma_issues": [
+    "\"তিরিশে নভেম্বর\": The date is stated as November 30th, but the locked facts specify October 31st (৩১ অক্টোবর)."
+   ],
+   "planted_line": "তিরিশে নভেম্বর পর্যন্ত অফার। আজই অর্ডার করো।"
+  },
+  {
+   "language": "bn",
+   "case": "invented_claim_in_words",
+   "planted": true,
+   "caught_by_code": false,
+   "caught_by_gemma": true,
+   "flagged": true,
+   "correct": true,
+   "code_issues": [],
+   "gemma_issues": [
+    "\"ডাক্তারদের পরামর্শে তৈরি।\": The claim 'made on doctors' advice' is not present in the locked facts or the master ad."
+   ],
+   "planted_line": "কেটল অ্যান্ড কড়ক। আদা-এলাচ আর একদম বাড়ির স্বাদ। ডাক্তারদের পরামর্শে তৈরি।"
+  },
+  {
+   "language": "hi",
+   "case": "control_unchanged",
+   "planted": false,
+   "caught_by_code": false,
+   "caught_by_gemma": false,
+   "flagged": false,
+   "correct": true,
+   "code_issues": [],
+   "gemma_issues": [],
+   "planted_line": null
+  },
+  {
+   "language": "hi",
+   "case": "wrong_price_in_digits",
+   "planted": true,
+   "caught_by_code": true,
+   "caught_by_gemma": true,
+   "flagged": true,
+   "correct": true,
+   "code_issues": [
+    "Price is missing",
+    "the line contains a number, price or link that isn't a locked fact"
+   ],
+   "gemma_issues": [
+    "\"सिर्फ ₹129 का बॉक्स\": The spoken price is ₹129, but the locked facts state the price is ₹149."
+   ],
+   "planted_line": "सिर्फ ₹129 का बॉक्स। अभी दो खरीदें, एक मुफ़्त है।"
+  },
+  {
+   "language": "hi",
+   "case": "extra_discount_in_words",
+   "planted": true,
+   "caught_by_code": false,
+   "caught_by_gemma": true,
+   "flagged": true,
+   "correct": true,
+   "code_issues": [],
+   "gemma_issues": [
+    "\"अब आधे दाम में!\": The claim 'now at half price' is not mentioned in the locked facts or the master ad; the only offer is 'Buy 2 Get 1 Free'."
+   ],
+   "planted_line": "सिर्फ एक सौ उनचास रुपये का बॉक्स। अभी दो खरीदें, एक मुफ़्त है। अब आधे दाम में!"
+  },
+  {
+   "language": "hi",
+   "case": "wrong_date_in_words",
+   "planted": true,
+   "caught_by_code": true,
+   "caught_by_gemma": true,
+   "flagged": true,
+   "correct": true,
+   "code_issues": [
+    "Offer ends is missing"
+   ],
+   "gemma_issues": [
+    "\"तीस नवंबर\": The locked facts state the offer ends on 31 October (इकतीस अक्टूबर), but the script says 30 November (तीस नवंबर)."
+   ],
+   "planted_line": "मौका तीस नवंबर तक है। आज ही मंगवाएं।"
+  },
+  {
+   "language": "hi",
+   "case": "invented_claim_in_words",
+   "planted": true,
+   "caught_by_code": false,
+   "caught_by_gemma": true,
+   "flagged": true,
+   "correct": true,
+   "code_issues": [],
+   "gemma_issues": [
+    "\"डॉक्टरों की सलाह से बनी।\": The claim that the product is 'made with doctors' advice' is not present in the locked facts or the master ad."
+   ],
+   "planted_line": "केटल एंड कड़क. असली अदरक, इलायची और घर जैसा स्वाद। डॉक्टरों की सलाह से बनी।"
+  },
+  {
+   "language": "it",
+   "case": "control_unchanged",
+   "planted": false,
+   "caught_by_code": false,
+   "caught_by_gemma": false,
+   "flagged": false,
+   "correct": true,
+   "code_issues": [],
+   "gemma_issues": [],
+   "planted_line": null
+  },
+  {
+   "language": "it",
+   "case": "wrong_price_in_digits",
+   "planted": true,
+   "caught_by_code": true,
+   "caught_by_gemma": true,
+   "flagged": true,
+   "correct": true,
+   "code_issues": [
+    "Price is missing",
+    "the line contains a number, price or link that isn't a locked fact"
+   ],
+   "gemma_issues": [
+    "\"€3,90\": The spoken price is €3,90, but the locked facts state the price is €4,90."
+   ],
+   "planted_line": "Solo €3,90 a confezione. E ora prendi tre, paghi due."
+  },
+  {
+   "language": "it",
+   "case": "extra_discount_in_words",
+   "planted": true,
+   "caught_by_code": false,
+   "caught_by_gemma": true,
+   "flagged": true,
+   "correct": true,
+   "code_issues": [],
+   "gemma_issues": [
+    "\"Ora a metà prezzo!\": The claim 'half price' is not supported by the locked facts or the master ad; the offer is 'Buy 3, pay for 2'."
+   ],
+   "planted_line": "Solo quattro euro e novanta a confezione. E ora prendi tre, paghi due. Ora a metà prezzo!"
+  },
+  {
+   "language": "it",
+   "case": "wrong_date_in_words",
+   "planted": true,
+   "caught_by_code": true,
+   "caught_by_gemma": true,
+   "flagged": true,
+   "correct": true,
+   "code_issues": [
+    "Offer ends is missing"
+   ],
+   "gemma_issues": [
+    "\"trenta novembre\": The locked facts state the offer ends on 31 ottobre, not 30 novembre."
+   ],
+   "planted_line": "Offerta valida fino al trenta novembre. Ordinalo ora."
+  },
+  {
+   "language": "it",
+   "case": "invented_claim_in_words",
+   "planted": true,
+   "caught_by_code": false,
+   "caught_by_gemma": true,
+   "flagged": true,
+   "correct": true,
+   "code_issues": [],
+   "gemma_issues": [
+    "\"Consigliato dai medici.\": This is a product claim (medical recommendation) that is not present in the locked facts or the master ad."
+   ],
+   "planted_line": "Kettle and Kadak. Zenzero, cardamomo e quel gusto di casa. Consigliato dai medici."
+  }
+ ]
+}

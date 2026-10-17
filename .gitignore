@@ -38,3 +38,10 @@ Thumbs.db
 .vscode/
 .idea/
 *.log
+
+# Deck build intermediates (the PDF + cover are committed)
+submission/deck/slide-*
+submission/deck/sheet*
+submission/deck/preview*
+submission/deck/l.txt
+submission/check.jpg

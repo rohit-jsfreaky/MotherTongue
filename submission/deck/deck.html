@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>MotherTongue — investor deck</title>
+<style>
+  @font-face { font-family: GS; src: url(GeneralSans-400.woff2) format("woff2"); font-weight: 400; }
+  @font-face { font-family: GS; src: url(GeneralSans-500.woff2) format("woff2"); font-weight: 500; }
+  @font-face { font-family: GS; src: url(GeneralSans-600.woff2) format("woff2"); font-weight: 600; }
+  :root { --ink: #05050a; --fg2: #4b5060; --fg3: #8a8f9c; --violet: #573cff; --lime: #d1fe17; --line: #e7e8ec; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  ::-webkit-scrollbar { display: none; } html { scrollbar-width: none; }
+  body { background: #222; font-family: GS, "Noto Sans Bengali", "Noto Sans Devanagari", "Nirmala UI", sans-serif; color: var(--ink); }
+  .s { width: 1920px; height: 1080px; position: relative; overflow: hidden; background: #fff; padding: 110px 130px; margin: 0 auto 40px; }
+  .kicker { font-size: 24px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--violet); }
+  h1 { font-size: 132px; font-weight: 500; letter-spacing: -0.035em; line-height: 1.02; }
+  h2 { font-size: 84px; font-weight: 500; letter-spacing: -0.03em; line-height: 1.06; margin-top: 22px; }
+  h2 .t2, .t2 { color: var(--fg3); }
+  p.lead { font-size: 36px; line-height: 1.4; color: var(--fg2); margin-top: 34px; max-width: 1300px; }
+  .num { position: absolute; right: 130px; bottom: 60px; font-size: 22px; color: var(--fg3); }
+  .brand { position: absolute; left: 130px; bottom: 56px; font-size: 26px; font-weight: 600; display: flex; gap: 12px; align-items: center; }
+  .mark { width: 38px; height: 38px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; margin-top: 64px; }
+  .card { border: 1px solid var(--line); border-radius: 28px; padding: 40px; background: #fff; box-shadow: 0 8px 30px -12px rgba(16,17,26,.16); }
+  .card h3 { font-size: 36px; font-weight: 600; letter-spacing: -0.01em; }
+  .card p { font-size: 26px; line-height: 1.45; color: var(--fg2); margin-top: 14px; }
+  .shot { border-radius: 22px; box-shadow: 0 30px 80px -24px rgba(30,20,90,.45); border: 1px solid var(--line); width: 100%; display: block; }
+  .chip { display: inline-block; background: var(--lime); border-radius: 12px; padding: 8px 16px; font-size: 24px; font-weight: 600; }
+  .dark { background: #0b0b12; color: #fff; }
+  .dark .t2 { color: #9aa0b4; }
+  .tiles { display: flex; gap: 26px; }
+  .tiles figure { width: 300px; }
+  .tiles img { width: 300px; height: 533px; object-fit: cover; border-radius: 22px; }
+  .tiles figcaption { font-size: 24px; margin-top: 12px; font-weight: 500; }
+  .big { font-size: 150px; font-weight: 500; letter-spacing: -0.04em; line-height: 1; }
+  .row { display: flex; gap: 70px; align-items: center; }
+  ul.b { margin-top: 30px; padding-left: 36px; font-size: 32px; line-height: 1.6; color: var(--fg2); }
+  table { border-collapse: collapse; width: 100%; margin-top: 50px; font-size: 26px; }
+  td, th { text-align: left; padding: 20px 18px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--fg3); font-weight: 500; font-size: 22px; text-transform: uppercase; letter-spacing: .06em; }
+  .yes { color: #16a34a; font-weight: 600; } .no { color: #c0392b; } .mid { color: #b45309; }
+  .src { position: absolute; left: 130px; bottom: 100px; font-size: 20px; color: var(--fg3); max-width: 1500px; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><symbol id="m" viewBox="0 0 28 28"><rect width="28" height="28" rx="8" fill="#5b41f8"/><path d="M8 18c0-3.6 2.6-6.5 6-6.5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" fill="none"/><path d="M12.3 19.3c0-2.4 1.7-4.2 3.9-4.2" stroke="#fff" stroke-width="2.4" stroke-linecap="round" fill="none" opacity=".75"/><circle cx="19.6" cy="18.6" r="1.9" fill="#d1fe17"/></symbol></svg>
+
+<!-- 1 Title -->
+<section class="s" id="s1" style="background:url(hero-bg.jpeg) center/cover; color:#fff; display:flex; flex-direction:column; justify-content:center;">
+  <div style="display:flex;gap:16px;align-items:center;font-size:34px;font-weight:600"><svg class="mark" style="width:52px;height:52px"><use href="#m"/></svg>mothertongue</div>
+  <h1 style="margin-top:60px">One ad.<br/>Every audience,<br/>in their own words.</h1>
+  <p style="margin-top:44px;display:inline-block;width:fit-content;background:rgba(5,5,10,.55);backdrop-filter:blur(6px);border-radius:16px;padding:16px 26px;font-size:32px;color:#fff">Rohit Kashyap · mothertongue-flame.vercel.app</p>
+</section>
+
+<!-- 2 Story -->
+<section class="s" id="s2">
+  <div class="kicker">The problem</div>
+  <div class="row" style="margin-top:20px; align-items:flex-start">
+    <div style="flex:1">
+      <h2>“In Uttar Pradesh every ad I saw was in Hindi. I moved to Bengal — now they’re in Bengali.”</h2>
+      <p class="lead">Big brands pay agencies for that. Everyone else runs one ad that half their audience doesn’t feel.</p>
+    </div>
+    <div class="tiles">
+      <figure><img src="chai-hi.jpg"/><figcaption>Lucknow · Hindi</figcaption></figure>
+      <figure><img src="chai-bn.jpg"/><figcaption>Kolkata · Bengali</figcaption></figure>
+    </div>
+  </div>
+  <div class="brand"><svg class="mark"><use href="#m"/></svg>mothertongue</div><div class="num">2</div>
+</section>
+
+<!-- 3 Why it hurts -->
+<section class="s" id="s3">
+  <div class="kicker">Why it hurts</div>
+  <h2>A proper version per region costs weeks. <span class="t2">A cheap one sounds translated — and nobody trusts it unchecked.</span></h2>
+  <div class="grid3">
+    <div class="card"><h3>Agencies + voice artists</h3><p>A new script, a new voice and a new edit for every language — weeks of back and forth per campaign.</p></div>
+    <div class="card"><h3>$2–20 per minute</h3><p>What AI video translation costs today — and it still swaps words, not the way a city talks.</p></div>
+    <div class="card"><h3>One wrong price</h3><p>A wrong price or an invented offer in one language is a real loss — so every AI version gets checked by hand.</p></div>
+  </div>
+  <div class="src">Source: pictory.ai, “10 Best AI Video Translators We Tested in 2026”, 12 Aug 2026.</div>
+  <div class="brand"><svg class="mark"><use href="#m"/></svg>mothertongue</div><div class="num">3</div>
+</section>
+
+<!-- 4 Why now -->
+<section class="s dark" id="s4" style="background:#0b0b12">
+  <div class="kicker" style="color:#b9a8ff">Why now</div>
+  <h2>Open models can now <span style="color:var(--lime)">see</span> an ad, <span style="color:var(--lime)">write</span> and <span style="color:var(--lime)">speak</span> many languages, and <span style="color:var(--lime)">check</span> the result. <span class="t2">Cheaply enough to make one version per audience.</span></h2>
+  <p class="lead" style="color:#b8bdcc">MotherTongue runs every AI step on AMD: a version takes about ten model calls and two minutes — not an agency and a fortnight.</p>
+  <div class="brand"><svg class="mark"><use href="#m"/></svg>mothertongue</div><div class="num">4</div>
+</section>
+
+<!-- 5 Product -->
+<section class="s" id="s5">
+  <div class="kicker">The product</div>
+  <h2>Upload once. Pick audiences. <span class="t2">Review and approve.</span></h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:56px">
+    <img class="shot" src="../shots/new.png"/>
+    <img class="shot" src="../shots/dashboard.png"/>
+  </div>
+  <div class="brand"><svg class="mark"><use href="#m"/></svg>mothertongue</div><div class="num">5</div>
+</section>
+
+<!-- 6 Moment -->
+<section class="s" id="s6" style="padding-top:80px">
+  <div class="kicker">The moment</div>
+  <h2 style="font-size:70px">One ad, four audiences, four different ads. <span class="t2">Every price exactly as the brand set it.</span></h2>
+  <img class="shot" src="../shots/compare.png" style="margin-top:40px; height:690px; object-fit:cover; object-position:top"/>
+  <div class="num">6</div>
+</section>
+
+<!-- 7 In charge -->
+<section class="s" id="s7" style="padding-top:80px">
+  <div class="row" style="align-items:flex-start;gap:60px">
+    <div style="width:640px;flex-shrink:0">
+      <div class="kicker">You stay in charge</div>
+      <h2 style="font-size:66px">It caught a claim the brand never made. <span class="t2">Then it learned.</span></h2>
+      <ul class="b" style="font-size:28px">
+        <li>v1 said “completely natural” in Hindi — blocked, Approve locked</li>
+        <li>The marketer asked in plain words</li>
+        <li>v2 in ~3 minutes, only that line changed</li>
+        <li>Rule saved to brand memory for next time</li>
+      </ul>
+    </div>
+    <img class="shot" src="../shots/review-blocked.png" style="flex:1; min-width:0"/>
+  </div>
+  <div class="brand"><svg class="mark"><use href="#m"/></svg>mothertongue</div><div class="num">7</div>
+</section>
+
+<!-- 8 Business model -->
+<section class="s" id="s8">
+  <div class="kicker">Business model</div>
+  <h2>Pay for the versions you approve. <span class="t2">Agencies pay monthly.</span></h2>
+  <div class="grid3">
+    <div class="card"><h3>Free</h3><p>3 versions on your own ad. Every language we offer. No credit card.</p></div>
+    <div class="card" style="border-color:var(--violet)"><h3>Pro · per approved version</h3><p>Unlimited campaigns, MP4 + subtitles, approval report. You never pay for a version you reject.</p></div>
+    <div class="card"><h3>Agency · monthly</h3><p>Several brands, client review links, team approvals. <span class="t2">(coming soon)</span></p></div>
+  </div>
+  <p class="lead" style="font-size:30px">Our AI cost per version on AMD’s meter: about <b>$0.0002</b> at listed rates (≈10 calls). What buyers pay today: <b>$2–20 per minute</b> for AI dubbing alone, far more for an agency.</p>
+  <div class="brand"><svg class="mark"><use href="#m"/></svg>mothertongue</div><div class="num">8</div>
+</section>
+
+<!-- 9 Who buys -->
+<section class="s" id="s9">
+  <div class="kicker">Who buys</div>
+  <h2>Everyone who sells to people <span class="t2">who don’t all speak the same way.</span></h2>
+  <div class="grid3">
+    <div class="card"><h3>D2C and consumer brands</h3><p>Selling across states and countries, running the same ad everywhere today.</p></div>
+    <div class="card"><h3>Regional businesses</h3><p>Growing beyond one city, with no budget for an agency per language.</p></div>
+    <div class="card"><h3>Agencies</h3><p>Making regional versions for clients — in a day, with the client’s rules applied.</p></div>
+  </div>
+  <p class="lead" style="font-size:30px">India first — 22 languages in the Eighth Schedule of the Constitution — then Europe (Italy, Spain, Germany).</p>
+  <div class="brand"><svg class="mark"><use href="#m"/></svg>mothertongue</div><div class="num">9</div>
+</section>
+
+<!-- 10 Competition -->
+<section class="s" id="s10">
+  <div class="kicker">Competition</div>
+  <h2>Others swap the voice. <span class="t2">We re-make the ad — and lock the facts.</span></h2>
+  <table>
+    <tr><th></th><th>Written for each city</th><th>Facts locked + checked</th><th>Learns your taste</th><th>Time per version</th></tr>
+    <tr><td>Dubbing tools</td><td class="no">Translated</td><td class="no">No</td><td class="no">No</td><td class="yes">Minutes</td></tr>
+    <tr><td>Personalised-video platforms</td><td class="mid">Name / field swaps</td><td class="mid">Template fields</td><td class="no">No</td><td class="yes">Minutes</td></tr>
+    <tr><td>Agencies</td><td class="yes">Yes</td><td class="mid">By hand</td><td class="mid">Slowly</td><td class="no">Weeks</td></tr>
+    <tr><td><b>MotherTongue</b></td><td class="yes">Yes</td><td class="yes">Every version</td><td class="yes">Brand memory</td><td class="yes">Minutes</td></tr>
+  </table>
+  <div class="brand"><svg class="mark"><use href="#m"/></svg>mothertongue</div><div class="num">10</div>
+</section>
+
+<!-- 11 Proof -->
+<section class="s dark" id="s11" style="background:#0b0b12">
+  <div class="kicker" style="color:#b9a8ff">Proof — measured, small samples</div>
+  <div class="grid3" style="margin-top:60px">
+    <div><div class="big" style="color:var(--lime)">16/16</div><p class="lead" style="color:#c8ccd8;font-size:30px;margin-top:20px">planted wrong facts caught before approval, in 4 languages — 0 false alarms on clean controls</p></div>
+    <div><div class="big">12</div><p class="lead" style="color:#c8ccd8;font-size:30px;margin-top:20px">real versions made on AMD: 3 sample ads × Bengali, Hindi, Italian, English</p></div>
+    <div><div class="big">~10</div><p class="lead" style="color:#c8ccd8;font-size:30px;margin-top:20px">AI calls and ~2 minutes per version — plus a review loop that made v2 in ~3 minutes</p></div>
+  </div>
+  <p class="lead" style="color:#8f95a6;font-size:24px;position:absolute;bottom:110px">Every number has a result file in the public repo: evidence/planted.json · evidence/cost.json · evidence/phase1/.</p>
+  <div class="num">11</div>
+</section>
+
+<!-- 12 GTM -->
+<section class="s" id="s12">
+  <div class="kicker">Go-to-market</div>
+  <h2>Start where ads already run <span class="t2">in many languages.</span></h2>
+  <ul class="b">
+    <li>D2C brands running Meta and YouTube ads across Indian states</li>
+    <li>Agencies as resellers — one workspace per client brand</li>
+    <li>Free tier: 3 versions on your own ad, so the product sells itself</li>
+    <li>Five design partners first, before any paid acquisition</li>
+  </ul>
+  <div class="brand"><svg class="mark"><use href="#m"/></svg>mothertongue</div><div class="num">12</div>
+</section>
+
+<!-- 13 Roadmap -->
+<section class="s" id="s13">
+  <div class="kicker">Roadmap</div>
+  <h2>What comes next. <span class="t2">Each step only after it works properly.</span></h2>
+  <div class="grid3" style="grid-template-columns:repeat(4,1fr)">
+    <div class="card"><h3>More languages</h3><p>Tamil, Telugu, Marathi, Kannada — each added only after its voice is tested.</p></div>
+    <div class="card"><h3>Per-store versions</h3><p>The local shop’s name and address in each version, at scale.</p></div>
+    <div class="card"><h3>Publish</h3><p>Send approved versions straight to Meta and YouTube ad accounts.</p></div>
+    <div class="card"><h3>Teams</h3><p>Client review links and team approvals for agencies.</p></div>
+  </div>
+  <div class="brand"><svg class="mark"><use href="#m"/></svg>mothertongue</div><div class="num">13</div>
+</section>
+
+<!-- 14 Team + ask -->
+<section class="s" id="s14" style="background:url(cta-bg.png) center/cover; color:#fff">
+  <div class="kicker" style="color:var(--lime)">Team + ask</div>
+  <h2>Rohit Kashyap <span style="color:rgba(255,255,255,.7)">— full-stack developer, Kolkata. Ships fast; hackathon winner. Built MotherTongue end to end.</span></h2>
+  <p class="lead" style="color:#fff;font-size:42px;margin-top:70px">The ask: <span class="chip" style="color:#05050a">5 design partners</span> — brands or agencies — and compute credits to grow the languages.</p>
+  <p class="lead" style="color:rgba(255,255,255,.85);position:absolute;bottom:90px">mothertongue-flame.vercel.app · Built on AMD</p>
+</section>
+</body>
+</html>

@@ -36,7 +36,7 @@ export default async function Dashboard() {
           </div>
           <Link href="/app/memory" className="flex items-center gap-1.5 rounded-[14px] border border-line bg-white px-4 py-2 text-[12.5px] text-fg-2 hover:border-violet/40">
             <Brain weight="fill" className="size-4 text-violet" />
-            Brand memory: <span className="font-mono text-[15px] font-medium text-fg">{rules ?? 0}</span> rules
+            Brand memory: <span className="font-mono text-[15px] font-medium text-fg">{rules ?? 0}</span> {rules === 1 ? "rule" : "rules"}
           </Link>
         </div>
       </div>
